@@ -1,0 +1,295 @@
+// Ürün kataloğu verisi — klasör taramasından otomatik oluşturuldu.
+// Yeni ürün eklemek için: yeni bir obje ekleyin, "folder" gerçek klasör adıyla birebir eşleşmeli.
+// variantMode: true olan kategorilerde her görsel ayrı bir ürün/çeşit olarak listelenir.
+// labels: (opsiyonel) her görsel için görüntülenecek özel isim; verilmezse dosya adından otomatik üretilir.
+window.PRODUCTS = [
+  {
+    id: "kesme-sabun",
+    title: "Kesme Sabun",
+    subtitle: "125 gr",
+    folder: "Kesme Sabun 125 gr",
+    description: "Doğal yağlarla üretilen, el yapımı kesme sabunlarımız birbirinden özel koku ve içeriklerle sunulur.",
+    variantMode: true,
+    images: [
+      "Ardıç Katranı.png",
+      "Bıttım.png",
+      "Biberiye.png",
+      "Çörekotu.png",
+      "Defne.png",
+      "Eşek Sütü.png",
+      "Hindistan Cevizi.png",
+      "Kahve.png",
+      "Keçi Sütü.png",
+      "Kojik Asit & Pirinç.png",
+      "Kükürt.png",
+      "Lavanta.png",
+      "Nar.png",
+      "Tropikal.png",
+      "Türk Hamamı.png",
+      "Zeytin.png"
+    ]
+  },
+  {
+    id: "kalp-sunger",
+    title: "Kalp Sünger Sabun",
+    subtitle: "135 gr",
+    folder: "Kalp Sünger Sabun 135 gr",
+    description: "Kalp şeklinde, sünger içerikli, hediyelik amaçlı özenle hazırlanmış sabunlarımız.",
+    variantMode: true,
+    images: [
+      "Eşek Sütü Sabunu_ Doğal Spa Şıklığı.png",
+      "Gül Sabunu Kalp Ambalajı ve Güller.png",
+      "Kalp Şeklinde Karpuz Sabunu.png",
+      "Kalp Şeklinde Lavantalı Kolajen Sabunu.png",
+      "Lavanta Sabunu Spa Ürün Fotoğrafı.png",
+      "Limon Sabunu ile Sıcak Spa Zarafeti.png",
+      "Mango Sabunu_ Tropikal Spa Ürünü.png",
+      "Nar Sabunu_ Sıcak Spa Zarafeti.png",
+      "Okyanus Sabunu Spa Düzeni.png"
+    ],
+    labels: [
+      "Eşek Sütü",
+      "Gül",
+      "Karpuz",
+      "Lavantalı Kolajen",
+      "Lavanta",
+      "Limon",
+      "Mango",
+      "Nar",
+      "Okyanus"
+    ]
+  },
+  {
+    id: "askili-sabun",
+    title: "Askılı Sabun",
+    subtitle: null,
+    folder: "Askılı Sabun",
+    description: "İpe dizilerek asılabilen, hem dekoratif hem işlevsel özel tasarım sabunlarımız.",
+    variantMode: true,
+    images: [
+      "Balık Sabunu.jpg",
+      "Dilek Sabunu.jpg",
+      "Nazar Sabunu.jpg"
+    ],
+    labels: [
+      "Balık",
+      "Dilek",
+      "Nazar"
+    ]
+  },
+  {
+    id: "soguk-proses",
+    title: "El Yapımı Soğuk Proses Sabun",
+    subtitle: null,
+    folder: "El Yapımı Soğuk Proses Sabun",
+    description: "Soğuk proses yöntemiyle üretilen, yüz, saç ve vücutta kullanılabilen doğal içerikli sabun serimiz.",
+    variantMode: true,
+    images: [
+      "dogal-aktif-komur-karbon-el-yapimi-yuz-sac-ve-vucut-sabunu-13.jpg",
+      "dogal-aloe-vera-el-yapimi-yuz-sac-ve-vucut-sabunu-10.jpg",
+      "dogal-ardic-katranli-el-yapimi-yuz-sac-ve-vucut-sabunu-16.jpg",
+      "dogal-argan-cam-el-yapimi-yuz-sac-ve-vucut-sabunu-19.jpg",
+      "dogal-bal-keci-sutu-el-yapimi-yuz-sac-ve-vucut-sabunu-5.jpg",
+      "dogal-bittim-el-yapimi-yuz-sac-ve-vucut-sabunu-11.jpg",
+      "dogal-cilt-beyazlatici-el-yapimi-yuz-sac-ve-vucut-sabunu-6.jpg",
+      "dogal-defne-badem-yagi-el-yapimi-yuz-sac-ve-vucut-sabunu-15.jpg",
+      "dogal-esek-sutlu-el-yapimi-yuz-sac-ve-vucut-sabunu-8.jpg",
+      "dogal-gul-el-yapimi-yuz-sac-ve-vucut-sabunu-12.jpg",
+      "dogal-kukurt-el-yapimi-yuz-sac-ve-vucut-sabunu-9.jpg",
+      "dogal-lavanta-el-yapimi-yuz-sac-ve-vucut-sabunu-18.jpg",
+      "dogal-limon-portakal-el-yapimi-yuz-sac-ve-vucut-sabunu-17.jpg",
+      "dogal-misk-amber-el-yapimi-yuz-sac-ve-vucut-sabunu-23.jpg",
+      "dogal-oud-el-yapimi-yuz-sac-ve-vucut-sabunu-22.jpg",
+      "dogal-safran-el-yapimi-yuz-sac-ve-vucut-sabunu-21.jpg",
+      "dogal-turk-hamam-pirinc-yagli-el-yapimi-yuz-sac-ve-vucut-sabunu-20.jpg",
+      "dogal-zeytinyagli-el-yapimi-yuz-sac-ve-vucut-sabunu-14.jpg"
+    ],
+    labels: [
+      "Aktif Kömür & Karbon",
+      "Aloe Vera",
+      "Ardıç Katranı",
+      "Argan Yağı",
+      "Bal & Keçi Sütü",
+      "Bıttım",
+      "Cilt Beyazlatıcı",
+      "Defne & Badem Yağı",
+      "Eşek Sütü",
+      "Gül",
+      "Kükürt",
+      "Lavanta",
+      "Limon & Portakal",
+      "Misk & Amber",
+      "Oud",
+      "Safran",
+      "Türk Hamamı & Pirinç Yağı",
+      "Zeytinyağı"
+    ]
+  },
+  {
+    id: "oval-sunger",
+    title: "Oval Sünger Sabun",
+    subtitle: "135 gr",
+    folder: "Oval Sünger Sabun 135gr",
+    description: "Yumuşak dokusu ve oval formuyla günlük kullanım için ideal, sünger içerikli sabunumuz — birbirinden farklı kokularla.",
+    variantMode: true,
+    images: [
+      "Aloe Vera.png",
+      "Amber.png",
+      "Argan.png",
+      "Çilek.png",
+      "Elma.png",
+      "Eşek Sütü.png",
+      "Gül.png",
+      "Hamam.png",
+      "Karpuz.png",
+      "Keçi Sütü.png",
+      "Kiraz.png",
+      "Kolajen.png",
+      "Lavanta.png",
+      "Limon.png",
+      "Mandalina.png",
+      "Mango.png",
+      "Nar.png",
+      "Okyanus.png",
+      "Orman Meyvesi.png",
+      "Pirinç.png",
+      "Salyangoz.png",
+      "Sarımsak.png",
+      "Şeftali.png",
+      "Vanilya.png",
+      "Zeytin.png"
+    ]
+  },
+  {
+    id: "tas-dovme",
+    title: "Taş Dövme Sabun",
+    subtitle: "120 gr",
+    folder: "Taş Dövme Sabun 120gr",
+    description: "Geleneksel dövme tekniğiyle şekillendirilmiş, doğal taş dokulu özel tasarım sabunumuz.",
+    variantMode: false,
+    images: [
+      "ChatGPT Image 7 Eyl 2026 01_53_36.png",
+      "ChatGPT Image 7 Eyl 2026 01_53_46.png",
+      "ChatGPT Image 7 Eyl 2026 01_53_53.png",
+      "ChatGPT Image 7 Eyl 2026 01_54_00.png",
+      "ChatGPT Image 7 Eyl 2026 01_54_14.png",
+      "ChatGPT Image 7 Eyl 2026 01_54_30.png",
+      "ChatGPT Image 7 Eyl 2026 01_54_39.png",
+      "ChatGPT Image 7 Eyl 2026 01_54_50.png",
+      "ChatGPT Image 7 Eyl 2026 01_54_57.png",
+      "ChatGPT Image 7 Eyl 2026 01_55_03.png"
+    ]
+  },
+  {
+    id: "kagit-sarmali",
+    title: "Kağıt Sarmalı Sabun",
+    subtitle: "150 gr",
+    folder: "Kağıt Sarmalı Sabun 150gr",
+    description: "Zarif kağıt sarma detayıyla hediyelik ve günlük kullanıma uygun sabunumuz.",
+    variantMode: true,
+    images: [
+      "Christmas.png",
+      "Lavanta.png",
+      "Love You.png",
+      "Orkide.png",
+      "Zeytin Yapraklı.png",
+      "Zeytinyağı.png"
+    ]
+  },
+  {
+    id: "tahtali-buklet",
+    title: "Tahtalı Buklet Sabun",
+    subtitle: null,
+    folder: "Tahtalı Buklet Sabun",
+    description: "Ahşap tahta üzerinde sunulan, buklet dokulu özel tasarım sabunumuz.",
+    variantMode: false,
+    images: [
+      "ChatGPT Image 7 Eyl 2026 01_55_14.png",
+      "tahtalı buklet sabun.jpg"
+    ]
+  },
+  {
+    id: "kabak-lifli",
+    title: "Kabak Lifli Sabun",
+    subtitle: "100 gr",
+    folder: "Kabak Lifli Sabun 100gr",
+    description: "İçine gömülü doğal kabak lifi ile cildi nazikçe peeling eden özel sabunumuz — birbirinden farklı kokularla.",
+    variantMode: true,
+    images: [
+      "Aloe Vera.jpg",
+      "Ardıç Katranı.jpg",
+      "Çay Ağacı.jpg",
+      "Çilek.jpg",
+      "Eşek Sütü & Bal.jpg",
+      "Hamam.jpg",
+      "Hindistan Cevizi.jpg",
+      "Keçi Sütü.jpg",
+      "Lavanta.jpg",
+      "Limon.jpg",
+      "Nar.jpg",
+      "Okyanus.jpg",
+      "Pirinç.jpg",
+      "Ruşur Taşlı.jpg",
+      "Yosun.jpg",
+      "Zeytin.jpg"
+    ]
+  },
+  {
+    id: "uclu-set",
+    title: "3'lü Sabun Seti",
+    subtitle: null,
+    folder: "3lü Set",
+    description: "Birbirini tamamlayan üç sabundan oluşan, hediyelik olarak da tercih edilebilecek setimiz.",
+    variantMode: false,
+    images: [
+      "ChatGPT Image 7 Eyl 2026 01_51_43.png",
+      "ChatGPT Image 7 Eyl 2026 01_51_54.png",
+      "ChatGPT Image 7 Eyl 2026 01_52_01.png",
+      "ChatGPT Image 7 Eyl 2026 01_52_10.png"
+    ]
+  },
+  {
+    id: "lux-uclu-set",
+    title: "Lüx 3'lü Set",
+    subtitle: null,
+    folder: "Lüx 3lü Set",
+    description: "Şık ambalajı ile öne çıkan, hediyelik amaçlı lüks üçlü sabun setimiz.",
+    variantMode: false,
+    images: [
+      "Gemini_Generated_Image_2qx62g2qx62g2qx6.jfif.jpg",
+      "Gemini_Generated_Image_4q5aot4q5aot4q5a.jfif.jpg",
+      "Gemini_Generated_Image_8y4nyp8y4nyp8y4n.jfif.jpg",
+      "Gemini_Generated_Image_cm5dn2cm5dn2cm5d.jfif.jpg",
+      "Gemini_Generated_Image_cvzvhqcvzvhqcvzv.jfif.jpg",
+      "Gemini_Generated_Image_gqdxtpgqdxtpgqdx.jfif.jpg",
+      "Gemini_Generated_Image_kfn410kfn410kfn4.jpg",
+      "Gemini_Generated_Image_lfkfw0lfkfw0lfkf.jfif.jpg",
+      "Gemini_Generated_Image_o8cwf3o8cwf3o8cw.jfif.jpg"
+    ]
+  },
+  {
+    id: "zeytinyagi-uclu",
+    title: "3'lü Zeytinyağı Sabunu",
+    subtitle: null,
+    folder: "3lü Zeytinyağı Sabunu",
+    description: "Saf zeytinyağı içeriğiyle hazırlanan, üçlü set halinde sunulan doğal sabunumuz.",
+    variantMode: false,
+    images: [
+      "ChatGPT Image 7 Eyl 2026 01_55_22.png"
+    ]
+  },
+  {
+    id: "asetatli-hediyelik",
+    title: "Asetatlı Hediyelik Set",
+    subtitle: "Kese + Sabun",
+    folder: "Asetatlı Hediyelik Set Kese+Sabun",
+    description: "Asetat kutusu içerisinde kese ve sabunun bir arada sunulduğu şık hediyelik setimiz.",
+    variantMode: false,
+    images: [
+      "Gemini_Generated_Image_2fmevk2fmevk2fme.jfif",
+      "Gemini_Generated_Image_49gbod49gbod49gb.jfif",
+      "Gemini_Generated_Image_tutrtptutrtptutr.jfif",
+      "Gemini_Generated_Image_v599n6v599n6v599.jfif"
+    ]
+  }
+];
