@@ -4,6 +4,7 @@
   var STORAGE_KEY = "teklifListesi";
   var EMAIL_KEY = "teklifEmail";
   var TO_EMAIL = "troysoapun@gmail.com";
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/" + TO_EMAIL;
 
   function load() {
     try {
@@ -52,7 +53,7 @@
     return div.innerHTML;
   }
 
-  var panelEl, listEl, badgeEl, emailInput;
+  var panelEl, listEl, badgeEl, emailInput, statusEl, submitBtn;
 
   function buildUI() {
     var wrap = document.createElement("div");
@@ -73,6 +74,7 @@
           '<label class="quote-email-label" for="quote-email">E-posta adresiniz</label>' +
           '<input type="email" id="quote-email" placeholder="ornek@eposta.com" required>' +
           '<button class="btn btn-primary quote-submit" id="quote-submit" type="button">Teklif Al</button>' +
+          '<p class="quote-status" id="quote-status"></p>' +
           '<p class="quote-note">Seçtiğiniz ürünler e-posta adresinizle birlikte tarafımıza iletilir.</p>' +
         '</div>' +
       '</div>';
@@ -82,6 +84,8 @@
     listEl = document.getElementById("quote-list");
     badgeEl = document.getElementById("quote-badge");
     emailInput = document.getElementById("quote-email");
+    statusEl = document.getElementById("quote-status");
+    submitBtn = document.getElementById("quote-submit");
 
     document.getElementById("quote-fab").addEventListener("click", function () {
       panelEl.classList.toggle("open");
@@ -89,7 +93,7 @@
     document.getElementById("quote-panel-close").addEventListener("click", function () {
       panelEl.classList.remove("open");
     });
-    document.getElementById("quote-submit").addEventListener("click", submitQuote);
+    submitBtn.addEventListener("click", submitQuote);
 
     var savedEmail = localStorage.getItem(EMAIL_KEY);
     if (savedEmail) emailInput.value = savedEmail;
@@ -120,6 +124,19 @@
     });
   }
 
+  function setStatus(text, kind) {
+    statusEl.textContent = text || "";
+    statusEl.className = "quote-status" + (kind ? " quote-status-" + kind : "");
+  }
+
+  function buildMailtoFallback(email, lines) {
+    var body = "Merhaba,\n\nAşağıdaki ürünler için teklif almak istiyorum:\n\n" +
+      lines.join("\n") +
+      "\n\nBana ulaşabileceğiniz e-posta adresim: " + email + "\n";
+    var subject = "Teklif Talebi - Doğal Sabun Atölyesi";
+    return "mailto:" + TO_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+  }
+
   function submitQuote() {
     var email = emailInput.value.trim();
     var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -127,24 +144,50 @@
     if (!emailPattern.test(email)) {
       emailInput.classList.add("quote-email-error");
       emailInput.focus();
+      setStatus("Lütfen geçerli bir e-posta adresi girin.", "error");
       return;
     }
     emailInput.classList.remove("quote-email-error");
 
     if (!items.length) {
-      panelEl.classList.add("open");
+      setStatus("Önce listeye ürün eklemelisiniz.", "error");
       return;
     }
 
     localStorage.setItem(EMAIL_KEY, email);
 
     var lines = items.map(function (it, idx) { return (idx + 1) + ". " + it.label; });
-    var body = "Merhaba,\n\nAşağıdaki ürünler için teklif almak istiyorum:\n\n" +
-      lines.join("\n") +
-      "\n\nBana ulaşabileceğiniz e-posta adresim: " + email + "\n";
-    var subject = "Teklif Talebi - Doğal Sabun Atölyesi";
+    var messageText = "Aşağıdaki ürünler için teklif almak istiyorum:\n\n" + lines.join("\n");
 
-    window.location.href = "mailto:" + TO_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+    submitBtn.disabled = true;
+    setStatus("Gönderiliyor…", "pending");
+
+    fetch(FORM_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "Accept": "application/json" },
+      body: JSON.stringify({
+        _subject: "Teklif Talebi - Doğal Sabun Atölyesi",
+        _template: "table",
+        _replyto: email,
+        "Müşteri e-postası": email,
+        "Talep edilen ürünler": lines.join(" | "),
+        Mesaj: messageText
+      })
+    }).then(function (res) {
+      if (!res.ok) throw new Error("network");
+      return res.json();
+    }).then(function () {
+      setStatus("Teşekkürler! Teklifiniz tarafımıza iletildi.", "success");
+      items = [];
+      save();
+      renderPanel();
+    }).catch(function () {
+      var mailto = buildMailtoFallback(email, lines);
+      statusEl.innerHTML = 'Gönderilemedi. <a href="' + mailto + '">Buraya tıklayarak</a> e-posta programınızdan gönderebilirsiniz.';
+      statusEl.className = "quote-status quote-status-error";
+    }).finally(function () {
+      submitBtn.disabled = false;
+    });
   }
 
   function initCheckbox(cb) {

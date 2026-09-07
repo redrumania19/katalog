@@ -491,6 +491,17 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 
 .quote-submit { width: 100%; }
 
+.quote-status {
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin: 10px 0 0;
+  min-height: 1.1em;
+}
+.quote-status-pending { color: var(--ink-soft); }
+.quote-status-success { color: var(--olive-dark); }
+.quote-status-error { color: var(--terracotta-dark); }
+.quote-status-error a { color: var(--terracotta-dark); text-decoration: underline; }
+
 .quote-note {
   font-size: 0.76rem;
   color: var(--ink-soft);
