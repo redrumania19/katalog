@@ -27,6 +27,8 @@ body {
   line-height: 1.6;
 }
 
+picture { display: contents; }
+
 img {
   max-width: 100%;
   display: block;
@@ -118,6 +120,95 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 }
 
 .main-nav a:hover { color: var(--olive-dark); }
+
+/* Arama */
+.search-toggle {
+  background: none;
+  border: none;
+  font-size: 1.15rem;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 8px;
+  line-height: 1;
+  transition: background 0.15s ease;
+}
+.search-toggle:hover { background: var(--cream-2); }
+
+.search-panel {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 16px 30px rgba(60, 50, 38, 0.15);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease;
+}
+.search-panel.open { max-height: 480px; }
+
+.search-panel-inner { padding: 18px 24px 22px; }
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+.search-input:focus { outline: 2px solid var(--olive); outline-offset: 1px; }
+
+.search-results {
+  margin-top: 14px;
+  max-height: 360px;
+  overflow-y: auto;
+  display: grid;
+  gap: 8px;
+}
+
+.search-hint {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: var(--ink);
+  transition: background 0.15s ease;
+}
+.search-result:hover { background: var(--cream-2); }
+
+.search-result picture,
+.search-result img {
+  width: 46px;
+  height: 46px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.search-result-text { display: flex; flex-direction: column; }
+.search-result-title { font-weight: 700; font-size: 0.94rem; }
+.search-result-sub {
+  font-size: 0.78rem;
+  color: var(--olive-dark);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+@media (max-width: 640px) {
+  .search-panel-inner { padding: 14px 16px 18px; }
+}
 
 /* Buttons */
 .btn {

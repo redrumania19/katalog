@@ -7,6 +7,10 @@
     return encodeURIComponent(folder).replace(/%2F/g, "/") + "/" + encodeURIComponent(file);
   }
 
+  function webpSrc(folder, file) {
+    return imgSrc(folder, file.replace(/\.[^.]+$/, ".webp"));
+  }
+
   function escapeHtml(str) {
     var div = document.createElement("div");
     div.textContent = str;
@@ -23,9 +27,10 @@
 
     products.forEach(function (p) {
       var cover = imgSrc(p.folder, p.images[0]);
+      var coverWebp = webpSrc(p.folder, p.images[0]);
       html += '' +
         '<a class="category-card" href="' + categoryUrl(p.id) + '">' +
-          '<div class="category-card-image"><img src="' + cover + '" alt="' + escapeHtml(p.title) + '" loading="lazy" draggable="false"></div>' +
+          '<div class="category-card-image"><picture><source srcset="' + coverWebp + '" type="image/webp"><img src="' + cover + '" alt="' + escapeHtml(p.title) + '" loading="lazy" draggable="false"></picture></div>' +
           '<div class="category-card-body">' +
             '<h3 class="category-card-title">' + escapeHtml(p.title) + '</h3>' +
             (p.subtitle ? '<div class="category-card-subtitle">' + escapeHtml(p.subtitle) + '</div>' : '') +

@@ -7,6 +7,10 @@
     return encodeURIComponent(folder).replace(/%2F/g, "/") + "/" + encodeURIComponent(file);
   }
 
+  function webpSrc(folder, file) {
+    return imgSrc(folder, file.replace(/\.[^.]+$/, ".webp"));
+  }
+
   function cleanCaption(filename) {
     return filename
       .replace(/\.[^.]+$/, "")
@@ -27,7 +31,7 @@
   }
 
   function detailUrl(productId, imageIndex) {
-    return "urun.html?p=" + encodeURIComponent(productId) + "&i=" + imageIndex;
+    return "p/" + encodeURIComponent(productId) + "-" + imageIndex + ".html";
   }
 
   function getParam(name) {
@@ -64,7 +68,7 @@
       html += '' +
         '<div class="item-card">' +
           '<a class="item-card-link" href="' + detailUrl(p.id, iIdx) + '">' +
-            '<div class="item-card-image"><img src="' + src + '" alt="' + escapeHtml(fullLabel) + '" loading="lazy" draggable="false"></div>' +
+            '<div class="item-card-image"><picture><source srcset="' + webpSrc(p.folder, file) + '" type="image/webp"><img src="' + src + '" alt="' + escapeHtml(fullLabel) + '" loading="lazy" draggable="false"></picture></div>' +
             '<div class="item-card-label">' + escapeHtml(label) + '</div>' +
           '</a>' +
           '<label class="item-check">' +

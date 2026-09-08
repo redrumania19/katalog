@@ -5,6 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Troy Soapun | Ürün Kataloğu</title>
 <meta name="description" content="El yapımı doğal sabunlar — kesme sabun, kalp sünger sabun, hediyelik setler ve daha fazlası.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Troy Soapun">
+<meta property="og:title" content="Troy Soapun | El Yapımı Doğal Sabunlar">
+<meta property="og:description" content="El yapımı doğal sabunlar — kesme sabun, kalp sünger sabun, hediyelik setler ve daha fazlası.">
+<meta property="og:image" content="https://redrumania19.github.io/katalog/logo-256.png">
+<meta property="og:url" content="https://redrumania19.github.io/katalog/index.html">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="logo-256.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,7 +31,14 @@
       <a href="#hakkimizda">Hakkımızda</a>
       <a href="#iletisim">İletişim</a>
     </nav>
+    <button id="search-toggle" class="search-toggle" type="button" aria-label="Ürün ara">🔍</button>
     <a href="#iletisim" class="btn btn-outline nav-cta">İletişime Geç</a>
+  </div>
+  <div id="search-panel" class="search-panel">
+    <div class="container search-panel-inner">
+      <input type="text" id="search-input" class="search-input" placeholder="Ürün veya çeşit ara… (örn. lavanta)" autocomplete="off">
+      <div id="search-results" class="search-results"></div>
+    </div>
   </div>
 </header>
 
@@ -43,16 +57,28 @@
       </div>
       <div class="hero-banner" aria-hidden="true">
         <div class="hero-banner-tile tile-1">
-          <img src="Kalp%20S%C3%BCnger%20Sabun%20135%20gr/G%C3%BCl%20Sabunu%20Kalp%20Ambalaj%C4%B1%20ve%20G%C3%BCller.png" alt="" draggable="false">
+          <picture>
+            <source srcset="Kalp%20S%C3%BCnger%20Sabun%20135%20gr/G%C3%BCl%20Sabunu%20Kalp%20Ambalaj%C4%B1%20ve%20G%C3%BCller.webp" type="image/webp">
+            <img src="Kalp%20S%C3%BCnger%20Sabun%20135%20gr/G%C3%BCl%20Sabunu%20Kalp%20Ambalaj%C4%B1%20ve%20G%C3%BCller.png" alt="" draggable="false">
+          </picture>
         </div>
         <div class="hero-banner-tile tile-2">
-          <img src="Kesme%20Sabun%20125%20gr/Lavanta.png" alt="" draggable="false">
+          <picture>
+            <source srcset="Kesme%20Sabun%20125%20gr/Lavanta.webp" type="image/webp">
+            <img src="Kesme%20Sabun%20125%20gr/Lavanta.png" alt="" draggable="false">
+          </picture>
         </div>
         <div class="hero-banner-tile tile-3">
-          <img src="Ta%C5%9F%20D%C3%B6vme%20Sabun%20120gr/ChatGPT%20Image%207%20Eyl%202026%2001_53_36.png" alt="" draggable="false">
+          <picture>
+            <source srcset="Ta%C5%9F%20D%C3%B6vme%20Sabun%20120gr/ChatGPT%20Image%207%20Eyl%202026%2001_53_36.webp" type="image/webp">
+            <img src="Ta%C5%9F%20D%C3%B6vme%20Sabun%20120gr/ChatGPT%20Image%207%20Eyl%202026%2001_53_36.png" alt="" draggable="false">
+          </picture>
         </div>
         <div class="hero-banner-tile tile-4">
-          <img src="Ask%C4%B1l%C4%B1%20Sabun/Nazar%20Sabunu.jpg" alt="" draggable="false">
+          <picture>
+            <source srcset="Ask%C4%B1l%C4%B1%20Sabun/Nazar%20Sabunu.webp" type="image/webp">
+            <img src="Ask%C4%B1l%C4%B1%20Sabun/Nazar%20Sabunu.jpg" alt="" draggable="false">
+          </picture>
         </div>
       </div>
     </div>
@@ -129,6 +155,7 @@
 
 <script src="protect.js"></script>
 <script src="products.js"></script>
+<script src="search.js"></script>
 <script src="quote.js"></script>
 <script src="script.js"></script>
 </body>

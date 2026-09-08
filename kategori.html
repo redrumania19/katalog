@@ -4,6 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title id="page-title">Kategori | Troy Soapun</title>
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Troy Soapun">
+<meta property="og:title" content="Troy Soapun | El Yapımı Doğal Sabunlar">
+<meta property="og:description" content="El yapımı doğal sabunlarımızı keşfedin.">
+<meta property="og:image" content="https://redrumania19.github.io/katalog/logo-256.png">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="logo-256.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +29,14 @@
       <a href="index.html#hakkimizda">Hakkımızda</a>
       <a href="index.html#iletisim">İletişim</a>
     </nav>
+    <button id="search-toggle" class="search-toggle" type="button" aria-label="Ürün ara">🔍</button>
     <a href="index.html#iletisim" class="btn btn-outline nav-cta">İletişime Geç</a>
+  </div>
+  <div id="search-panel" class="search-panel">
+    <div class="container search-panel-inner">
+      <input type="text" id="search-input" class="search-input" placeholder="Ürün veya çeşit ara… (örn. lavanta)" autocomplete="off">
+      <div id="search-results" class="search-results"></div>
+    </div>
   </div>
 </header>
 
@@ -53,6 +66,7 @@
 
 <script src="protect.js"></script>
 <script src="products.js"></script>
+<script src="search.js"></script>
 <script src="quote.js"></script>
 <script src="category.js"></script>
 </body>

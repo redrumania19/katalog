@@ -8,6 +8,10 @@
     return encodeURIComponent(folder).replace(/%2F/g, "/") + "/" + encodeURIComponent(file);
   }
 
+  function webpSrc(folder, file) {
+    return imgSrc(folder, file.replace(/\.[^.]+$/, ".webp"));
+  }
+
   function cleanCaption(filename) {
     return filename
       .replace(/\.[^.]+$/, "")
@@ -22,10 +26,13 @@
   }
 
   function detailUrl(productId, imageIndex) {
-    return "urun.html?p=" + encodeURIComponent(productId) + "&i=" + imageIndex;
+    return "p/" + encodeURIComponent(productId) + "-" + imageIndex + ".html";
   }
 
   function getParams() {
+    if (window.__PRESET_P__) {
+      return { p: window.__PRESET_P__, i: window.__PRESET_I__ };
+    }
     var params = new URLSearchParams(window.location.search);
     return { p: params.get("p"), i: parseInt(params.get("i"), 10) };
   }
@@ -44,6 +51,7 @@
     var fullName = product.title + (label ? " — " + label : "");
 
     document.getElementById("page-title").textContent = fullName + " | Troy Soapun";
+    document.getElementById("detail-source").setAttribute("srcset", webpSrc(product.folder, file));
     document.getElementById("detail-image").src = imgSrc(product.folder, file);
     document.getElementById("detail-image").alt = fullName;
     document.getElementById("detail-image").setAttribute("draggable", "false");
@@ -85,7 +93,10 @@
         var thumbLabel = product.variantMode ? labelFor(product, i) : product.title;
         html += '' +
           '<a class="variant-thumb' + (i === index ? " active" : "") + '" href="' + detailUrl(product.id, i) + '">' +
-            '<img src="' + imgSrc(product.folder, imgFile) + '" alt="' + thumbLabel.replace(/"/g, "&quot;") + '" loading="lazy" draggable="false">' +
+            '<picture>' +
+              '<source srcset="' + webpSrc(product.folder, imgFile) + '" type="image/webp">' +
+              '<img src="' + imgSrc(product.folder, imgFile) + '" alt="' + thumbLabel.replace(/"/g, "&quot;") + '" loading="lazy" draggable="false">' +
+            '</picture>' +
             '<span>' + thumbLabel + '</span>' +
           '</a>';
       });
