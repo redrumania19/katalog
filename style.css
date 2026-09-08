@@ -747,6 +747,22 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   color: var(--olive-dark);
 }
 .contact-value { font-weight: 700; }
+.contact-card-static { cursor: default; }
+.contact-card-static:hover { transform: none; border-color: var(--line); }
+
+.map-embed {
+  margin-top: 26px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+}
+.map-embed iframe {
+  width: 100%;
+  height: 320px;
+  border: 0;
+  display: block;
+}
 
 /* Footer */
 .site-footer {
