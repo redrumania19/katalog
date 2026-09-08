@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title id="page-title">Ürün | Troy Soapun</title>
+<title id="page-title">Kategori | Troy Soapun</title>
 <link rel="icon" type="image/png" href="logo-256.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,39 +28,18 @@
 </header>
 
 <main>
-  <section class="product-detail">
+  <section class="category-page">
     <div class="container">
-      <a id="back-link" href="index.html#urunler" class="back-link">← Kategoriye dön</a>
+      <a href="index.html#urunler" class="back-link">← Tüm kategorilere dön</a>
 
-      <div class="detail-grid">
-        <div class="detail-image-wrap">
-          <img id="detail-image" src="" alt="">
-          <div class="detail-nav">
-            <a id="prev-link" class="detail-nav-btn" href="#" aria-label="Önceki">‹</a>
-            <span id="detail-counter" class="detail-counter"></span>
-            <a id="next-link" class="detail-nav-btn" href="#" aria-label="Sonraki">›</a>
-          </div>
-        </div>
-
-        <div class="detail-info">
-          <p class="eyebrow" id="detail-eyebrow">Ürün</p>
-          <h1 id="detail-title">Ürün Adı</h1>
-          <p id="detail-subtitle" class="detail-subtitle"></p>
-          <p id="detail-desc" class="detail-desc"></p>
-          <div class="detail-actions">
-            <a id="order-link" class="btn btn-primary" href="#" target="_blank" rel="noopener">Sipariş için WhatsApp'tan Yaz</a>
-            <label class="item-check item-check-lg">
-              <input type="checkbox" class="quote-check" id="detail-quote-check">
-              <span>Teklif listeme ekle</span>
-            </label>
-          </div>
-        </div>
+      <div class="category-page-head">
+        <p class="eyebrow" id="category-eyebrow">Koleksiyon</p>
+        <h1 id="category-title">Kategori</h1>
+        <p class="detail-subtitle" id="category-subtitle"></p>
+        <p class="detail-desc" id="category-desc"></p>
       </div>
 
-      <div class="detail-variants">
-        <h3>Bu kategorideki diğer çeşitler</h3>
-        <div id="variant-strip" class="variant-strip"></div>
-      </div>
+      <div id="item-grid" class="item-grid"></div>
     </div>
   </section>
 </main>
@@ -74,6 +53,6 @@
 
 <script src="products.js"></script>
 <script src="quote.js"></script>
-<script src="detail.js"></script>
+<script src="category.js"></script>
 </body>
 </html>

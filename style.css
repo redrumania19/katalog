@@ -230,42 +230,86 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   font-weight: 600;
 }
 
-/* Products */
+/* Products — kategori grid (ana sayfa) */
 .products { padding: 70px 0; }
 
-.category-section {
-  margin-bottom: 56px;
-  padding-bottom: 56px;
-  border-bottom: 1px solid var(--line);
-}
-.category-section:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 26px;
 }
 
-.category-head { margin-bottom: 22px; max-width: 720px; }
+.category-card {
+  background: var(--paper);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-.category-title {
+.category-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 36px rgba(60, 50, 38, 0.18);
+}
+
+.category-card-image {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--cream-2);
+}
+
+.category-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.category-card:hover .category-card-image img { transform: scale(1.06); }
+
+.category-card-body { padding: 18px 20px 22px; flex: 1; display: flex; flex-direction: column; }
+
+.category-card-title {
   font-family: var(--font-head);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  margin: 0 0 6px;
+  margin: 0 0 4px;
 }
 
-.category-subtitle {
+.category-card-subtitle {
   color: var(--terracotta-dark);
   font-weight: 800;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
+  margin-bottom: 8px;
 }
 
-.category-desc {
+.category-card-desc {
   color: var(--ink-soft);
-  font-size: 0.96rem;
-  margin: 0;
+  font-size: 0.92rem;
+  margin-bottom: 14px;
+  flex: 1;
 }
+
+.category-card-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--olive-dark);
+}
+
+/* Kategori sayfası (kategori.html) */
+.category-page { padding: 50px 0 90px; }
+.category-page-head { max-width: 720px; margin-bottom: 36px; }
+.category-page-head h1 { margin-bottom: 10px; }
 
 /* Variant grid — her ürün ayrı ayrı gösterilir */
 .item-grid {

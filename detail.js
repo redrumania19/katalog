@@ -50,7 +50,7 @@
     document.getElementById("detail-title").textContent = label || product.title;
     document.getElementById("detail-subtitle").textContent = label ? product.title + (product.subtitle ? " (" + product.subtitle + ")" : "") : (product.subtitle || "");
     document.getElementById("detail-desc").textContent = product.description || "";
-    document.getElementById("back-link").href = "index.html#cat-" + product.id;
+    document.getElementById("back-link").href = "kategori.html?c=" + encodeURIComponent(product.id);
 
     var counter = document.getElementById("detail-counter");
     var prevLink = document.getElementById("prev-link");
