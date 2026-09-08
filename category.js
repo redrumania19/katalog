@@ -64,7 +64,7 @@
       html += '' +
         '<div class="item-card">' +
           '<a class="item-card-link" href="' + detailUrl(p.id, iIdx) + '">' +
-            '<div class="item-card-image"><img src="' + src + '" alt="' + escapeHtml(fullLabel) + '" loading="lazy"></div>' +
+            '<div class="item-card-image"><img src="' + src + '" alt="' + escapeHtml(fullLabel) + '" loading="lazy" draggable="false"></div>' +
             '<div class="item-card-label">' + escapeHtml(label) + '</div>' +
           '</a>' +
           '<label class="item-check">' +

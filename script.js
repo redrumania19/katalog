@@ -25,7 +25,7 @@
       var cover = imgSrc(p.folder, p.images[0]);
       html += '' +
         '<a class="category-card" href="' + categoryUrl(p.id) + '">' +
-          '<div class="category-card-image"><img src="' + cover + '" alt="' + escapeHtml(p.title) + '" loading="lazy"></div>' +
+          '<div class="category-card-image"><img src="' + cover + '" alt="' + escapeHtml(p.title) + '" loading="lazy" draggable="false"></div>' +
           '<div class="category-card-body">' +
             '<h3 class="category-card-title">' + escapeHtml(p.title) + '</h3>' +
             (p.subtitle ? '<div class="category-card-subtitle">' + escapeHtml(p.subtitle) + '</div>' : '') +

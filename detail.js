@@ -46,6 +46,7 @@
     document.getElementById("page-title").textContent = fullName + " | Troy Soapun";
     document.getElementById("detail-image").src = imgSrc(product.folder, file);
     document.getElementById("detail-image").alt = fullName;
+    document.getElementById("detail-image").setAttribute("draggable", "false");
     document.getElementById("detail-eyebrow").textContent = product.subtitle ? product.title + " · " + product.subtitle : product.title;
     document.getElementById("detail-title").textContent = label || product.title;
     document.getElementById("detail-subtitle").textContent = label ? product.title + (product.subtitle ? " (" + product.subtitle + ")" : "") : (product.subtitle || "");
@@ -84,7 +85,7 @@
         var thumbLabel = product.variantMode ? labelFor(product, i) : product.title;
         html += '' +
           '<a class="variant-thumb' + (i === index ? " active" : "") + '" href="' + detailUrl(product.id, i) + '">' +
-            '<img src="' + imgSrc(product.folder, imgFile) + '" alt="' + thumbLabel.replace(/"/g, "&quot;") + '" loading="lazy">' +
+            '<img src="' + imgSrc(product.folder, imgFile) + '" alt="' + thumbLabel.replace(/"/g, "&quot;") + '" loading="lazy" draggable="false">' +
             '<span>' + thumbLabel + '</span>' +
           '</a>';
       });
