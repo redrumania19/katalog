@@ -20,8 +20,12 @@
   }
 
   function labelFor(product, i) {
-    if (product.labels && product.labels[i]) return product.labels[i];
-    return cleanCaption(product.images[i]);
+    var raw = (product.labels && product.labels[i]) ? product.labels[i] : cleanCaption(product.images[i]);
+    return window.I18N ? window.I18N.tVariant(raw) : raw;
+  }
+
+  function tCat(p, field) {
+    return (window.I18N ? window.I18N.tCat(p.id, field, p[field]) : p[field]) || "";
   }
 
   function escapeHtml(str) {
@@ -47,24 +51,30 @@
       return;
     }
 
-    document.getElementById("page-title").textContent = p.title + " | Troy Soapun";
-    document.getElementById("category-eyebrow").textContent = "Koleksiyon";
-    document.getElementById("category-title").textContent = p.title;
+    var catTitle = tCat(p, "title");
+    var catSubtitle = tCat(p, "subtitle");
+    var catDesc = tCat(p, "description");
+
+    document.getElementById("page-title").textContent = catTitle + " | Troy Soapun";
+    document.getElementById("category-eyebrow").textContent = (window.I18N && window.I18N.t("products.eyebrow")) || "Koleksiyon";
+    document.getElementById("category-title").textContent = catTitle;
     var subtitleEl = document.getElementById("category-subtitle");
-    if (p.subtitle) {
-      subtitleEl.textContent = p.subtitle;
+    if (catSubtitle) {
+      subtitleEl.textContent = catSubtitle;
       subtitleEl.style.display = "";
     } else {
       subtitleEl.style.display = "none";
     }
-    document.getElementById("category-desc").textContent = p.description || "";
+    document.getElementById("category-desc").textContent = catDesc;
+
+    var addToQuoteText = (window.I18N && window.I18N.t("item.addToQuote")) || "Teklife ekle";
 
     var wrap = document.getElementById("item-grid");
     var html = "";
     p.images.forEach(function (file, iIdx) {
       var src = imgSrc(p.folder, file);
-      var label = p.variantMode ? labelFor(p, iIdx) : p.title;
-      var fullLabel = p.title + (p.variantMode ? " — " + label : "");
+      var label = p.variantMode ? labelFor(p, iIdx) : catTitle;
+      var fullLabel = catTitle + (p.variantMode ? " — " + label : "");
       html += '' +
         '<div class="item-card">' +
           '<a class="item-card-link" href="' + detailUrl(p.id, iIdx) + '">' +
@@ -73,7 +83,7 @@
           '</a>' +
           '<label class="item-check">' +
             '<input type="checkbox" class="quote-check" data-p="' + escapeHtml(p.id) + '" data-i="' + iIdx + '" data-label="' + escapeHtml(fullLabel) + '">' +
-            '<span>Teklife ekle</span>' +
+            '<span>' + escapeHtml(addToQuoteText) + '</span>' +
           '</label>' +
         '</div>';
     });

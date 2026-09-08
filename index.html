@@ -27,16 +27,17 @@
       <span class="brand-name">Troy Soapun</span>
     </a>
     <nav class="main-nav">
-      <a href="#urunler">Ürünler</a>
-      <a href="#hakkimizda">Hakkımızda</a>
-      <a href="#iletisim">İletişim</a>
+      <a href="#urunler" data-i18n="nav.products">Ürünler</a>
+      <a href="#hakkimizda" data-i18n="nav.about">Hakkımızda</a>
+      <a href="#iletisim" data-i18n="nav.contact">İletişim</a>
     </nav>
     <button id="search-toggle" class="search-toggle" type="button" aria-label="Ürün ara">🔍</button>
-    <a href="#iletisim" class="btn btn-outline nav-cta">İletişime Geç</a>
+    <div id="lang-switcher" class="lang-switcher"></div>
+    <a href="#iletisim" class="btn btn-outline nav-cta" data-i18n="nav.cta">İletişime Geç</a>
   </div>
   <div id="search-panel" class="search-panel">
     <div class="container search-panel-inner">
-      <input type="text" id="search-input" class="search-input" placeholder="Ürün veya çeşit ara… (örn. lavanta)" autocomplete="off">
+      <input type="text" id="search-input" class="search-input" placeholder="Ürün veya çeşit ara… (örn. lavanta)" data-i18n-placeholder="search.placeholder" autocomplete="off">
       <div id="search-results" class="search-results"></div>
     </div>
   </div>
@@ -47,12 +48,12 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">El Emeği · Doğal İçerik</p>
-        <h1>Elle şekillenen,<br>doğadan gelen sabunlar</h1>
-        <p class="hero-text">Katalogumuzda yer alan tüm sabunlar el yapımıdır; doğal yağlar ve özenle seçilmiş içeriklerle hazırlanır. Aşağıdan tüm koleksiyonumuzu inceleyebilir, beğendiğiniz ürünler için bizimle iletişime geçebilirsiniz.</p>
+        <p class="eyebrow" data-i18n="hero.eyebrow">El Emeği · Doğal İçerik</p>
+        <h1 data-i18n="hero.title">Elle şekillenen,<br>doğadan gelen sabunlar</h1>
+        <p class="hero-text" data-i18n="hero.text">Katalogumuzda yer alan tüm sabunlar el yapımıdır; doğal yağlar ve özenle seçilmiş içeriklerle hazırlanır. Aşağıdan tüm koleksiyonumuzu inceleyebilir, beğendiğiniz ürünler için bizimle iletişime geçebilirsiniz.</p>
         <div class="hero-actions">
-          <a href="#urunler" class="btn btn-primary">Ürünleri İncele</a>
-          <a href="#iletisim" class="btn btn-ghost">Sipariş için İletişime Geç</a>
+          <a href="#urunler" class="btn btn-primary" data-i18n="hero.exploreBtn">Ürünleri İncele</a>
+          <a href="#iletisim" class="btn btn-ghost" data-i18n="hero.contactBtn">Sipariş için İletişime Geç</a>
         </div>
       </div>
       <div class="hero-banner" aria-hidden="true">
@@ -87,9 +88,9 @@
   <section id="urunler" class="products">
     <div class="container">
       <div class="section-head">
-        <p class="eyebrow">Koleksiyon</p>
-        <h2>Ürünlerimiz</h2>
-        <p class="section-text">Bir kategoriye tıklayarak o kategorideki tüm ürün ve çeşitleri inceleyebilirsiniz.</p>
+        <p class="eyebrow" data-i18n="products.eyebrow">Koleksiyon</p>
+        <h2 data-i18n="products.title">Ürünlerimiz</h2>
+        <p class="section-text" data-i18n="products.text">Bir kategoriye tıklayarak o kategorideki tüm ürün ve çeşitleri inceleyebilirsiniz.</p>
       </div>
       <div id="category-grid" class="category-grid"></div>
     </div>
@@ -98,15 +99,15 @@
   <section id="hakkimizda" class="about">
     <div class="container about-inner">
       <div class="about-text">
-        <p class="eyebrow">Hakkımızda</p>
-        <h2>Her sabun, sabırla ve elle şekillenir</h2>
-        <p>Bizim için sabun yapmak bir üretim biçiminden çok, doğaya duyulan bir saygının ifadesi. Her parça, sıcak bir mutfaktaki gibi özenle karıştırılır, dinlendirilir ve elle şekillendirilir; hiçbir sabun bir diğerinin birebir aynısı değildir — ve biz bunu bir eksiklik değil, el emeğinin imzası olarak görüyoruz.</p>
-        <p>Doğal yağları, bitkisel özleri ve cilde dost içerikleri bir araya getirirken tek bir hedefimiz var: hem kullanırken hem de görürken keyif veren, güvenle tercih edebileceğiniz sabunlar sunmak. Günlük kullanımdan özel gün hediyelerine kadar her ihtiyaca uygun bir çeşidimiz var.</p>
+        <p class="eyebrow" data-i18n="about.eyebrow">Hakkımızda</p>
+        <h2 data-i18n="about.title">Her sabun, sabırla ve elle şekillenir</h2>
+        <p data-i18n="about.p1">Bizim için sabun yapmak bir üretim biçiminden çok, doğaya duyulan bir saygının ifadesi. Her parça, sıcak bir mutfaktaki gibi özenle karıştırılır, dinlendirilir ve elle şekillendirilir; hiçbir sabun bir diğerinin birebir aynısı değildir — ve biz bunu bir eksiklik değil, el emeğinin imzası olarak görüyoruz.</p>
+        <p data-i18n="about.p2">Doğal yağları, bitkisel özleri ve cilde dost içerikleri bir araya getirirken tek bir hedefimiz var: hem kullanırken hem de görürken keyif veren, güvenle tercih edebileceğiniz sabunlar sunmak. Günlük kullanımdan özel gün hediyelerine kadar her ihtiyaca uygun bir çeşidimiz var.</p>
         <ul class="about-list">
-          <li>El yapımı, küçük parti üretim</li>
-          <li>Doğal yağ ve içerik seçimi</li>
-          <li>Hediyelik ve özel gün setleri</li>
-          <li>Toptan / perakende sipariş imkanı</li>
+          <li data-i18n="about.li1">El yapımı, küçük parti üretim</li>
+          <li data-i18n="about.li2">Doğal yağ ve içerik seçimi</li>
+          <li data-i18n="about.li3">Hediyelik ve özel gün setleri</li>
+          <li data-i18n="about.li4">Toptan / perakende sipariş imkanı</li>
         </ul>
       </div>
     </div>
@@ -115,29 +116,29 @@
   <section id="iletisim" class="contact">
     <div class="container contact-inner">
       <div class="section-head">
-        <p class="eyebrow">İletişim</p>
-        <h2>Sipariş ve bilgi için bize ulaşın</h2>
-        <p class="section-text">Beğendiğiniz ürünler için WhatsApp, telefon, e‑posta veya Instagram üzerinden bize ulaşabilirsiniz.</p>
+        <p class="eyebrow" data-i18n="contact.eyebrow">İletişim</p>
+        <h2 data-i18n="contact.title">Sipariş ve bilgi için bize ulaşın</h2>
+        <p class="section-text" data-i18n="contact.text">Beğendiğiniz ürünler için WhatsApp, telefon, e‑posta veya Instagram üzerinden bize ulaşabilirsiniz.</p>
       </div>
       <div class="contact-cards">
         <a class="contact-card" href="https://wa.me/905469325840" target="_blank" rel="noopener">
           <span class="contact-icon">💬</span>
-          <span class="contact-label">WhatsApp</span>
+          <span class="contact-label" data-i18n="contact.whatsapp">WhatsApp</span>
           <span class="contact-value">+90 546 932 58 40</span>
         </a>
         <a class="contact-card" href="tel:+905469325840">
           <span class="contact-icon">📞</span>
-          <span class="contact-label">Telefon</span>
+          <span class="contact-label" data-i18n="contact.phone">Telefon</span>
           <span class="contact-value">+90 546 932 58 40</span>
         </a>
         <a class="contact-card" href="mailto:troysoapun@gmail.com">
           <span class="contact-icon">✉️</span>
-          <span class="contact-label">E-posta</span>
+          <span class="contact-label" data-i18n="contact.email">E-posta</span>
           <span class="contact-value">troysoapun@gmail.com</span>
         </a>
         <a class="contact-card" href="https://instagram.com/troysoapun" target="_blank" rel="noopener">
           <span class="contact-icon">📷</span>
-          <span class="contact-label">Instagram</span>
+          <span class="contact-label" data-i18n="contact.instagram">Instagram</span>
           <span class="contact-value">@troysoapun</span>
         </a>
       </div>
@@ -148,12 +149,13 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <p>© 2026 Troy Soapun. Tüm hakları saklıdır.</p>
-    <p class="footer-note">Bu site yalnızca ürün tanıtım kataloğu amaçlıdır.</p>
+    <p data-i18n="footer.rights">© 2026 Troy Soapun. Tüm hakları saklıdır.</p>
+    <p class="footer-note" data-i18n="footer.note">Bu site yalnızca ürün tanıtım kataloğu amaçlıdır.</p>
   </div>
 </footer>
 
 <script src="protect.js"></script>
+<script src="i18n.js"></script>
 <script src="products.js"></script>
 <script src="search.js"></script>
 <script src="quote.js"></script>

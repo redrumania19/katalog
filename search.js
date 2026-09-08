@@ -21,8 +21,17 @@
   }
 
   function labelFor(product, i) {
-    if (product.labels && product.labels[i]) return product.labels[i];
-    return cleanCaption(product.images[i]);
+    var raw = (product.labels && product.labels[i]) ? product.labels[i] : cleanCaption(product.images[i]);
+    return window.I18N ? window.I18N.tVariant(raw) : raw;
+  }
+
+  function tCat(p, field) {
+    return (window.I18N ? window.I18N.tCat(p.id, field, p[field]) : p[field]) || "";
+  }
+
+  function t(key, vars, fallback) {
+    var val = window.I18N ? window.I18N.t(key, vars) : null;
+    return val != null ? val : fallback;
   }
 
   function detailUrl(productId, imageIndex) {
@@ -45,19 +54,21 @@
 
   var index = [];
   products.forEach(function (p) {
+    var title = tCat(p, "title");
+    var subtitle = tCat(p, "subtitle");
     p.images.forEach(function (file, i) {
-      var label = p.variantMode ? labelFor(p, i) : p.title;
-      var fullLabel = p.title + (p.variantMode ? " — " + label : "");
+      var label = p.variantMode ? labelFor(p, i) : title;
+      var fullLabel = title + (p.variantMode ? " — " + label : "");
       index.push({
         p: p.id,
         i: i,
         folder: p.folder,
         file: file,
-        title: p.title,
-        subtitle: p.subtitle,
+        title: title,
+        subtitle: subtitle,
         label: label,
         fullLabel: fullLabel,
-        searchText: normalize(p.title + " " + label + " " + (p.subtitle || ""))
+        searchText: normalize(title + " " + label + " " + (subtitle || ""))
       });
     });
   });
@@ -96,14 +107,14 @@
   function renderResults(query) {
     var q = normalize(query.trim());
     if (!q) {
-      resultsEl.innerHTML = '<p class="search-hint">Aramaya başlamak için ürün veya çeşit adı yazın.</p>';
+      resultsEl.innerHTML = '<p class="search-hint">' + escapeHtml(t("search.startHint", null, "Aramaya başlamak için ürün veya çeşit adı yazın.")) + '</p>';
       return;
     }
 
     var matches = index.filter(function (it) { return it.searchText.indexOf(q) !== -1; });
 
     if (!matches.length) {
-      resultsEl.innerHTML = '<p class="search-hint">"' + escapeHtml(query) + '" için sonuç bulunamadı.</p>';
+      resultsEl.innerHTML = '<p class="search-hint">' + escapeHtml(t("search.noResults", { q: query }, '"' + query + '" için sonuç bulunamadı.')) + '</p>';
       return;
     }
 
@@ -123,7 +134,8 @@
     }).join("");
 
     if (matches.length > MAX_RESULTS) {
-      html += '<p class="search-hint">+' + (matches.length - MAX_RESULTS) + ' sonuç daha var, aramayı daraltın.</p>';
+      var n = matches.length - MAX_RESULTS;
+      html += '<p class="search-hint">' + escapeHtml(t("search.moreResults", { n: n }, "+" + n + " sonuç daha var, aramayı daraltın.")) + '</p>';
     }
 
     resultsEl.innerHTML = html;

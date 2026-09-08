@@ -6,6 +6,11 @@
   var TO_EMAIL = "troysoapun@gmail.com";
   var FORM_ENDPOINT = "https://formsubmit.co/ajax/" + TO_EMAIL;
 
+  function t(key, vars, fallback) {
+    var val = window.I18N ? window.I18N.t(key, vars) : null;
+    return val != null ? val : fallback;
+  }
+
   function load() {
     try {
       var raw = localStorage.getItem(STORAGE_KEY);
@@ -59,23 +64,23 @@
     var wrap = document.createElement("div");
     wrap.className = "quote-widget";
     wrap.innerHTML = '' +
-      '<button class="quote-fab" id="quote-fab" type="button" aria-label="Teklif Listesi">' +
+      '<button class="quote-fab" id="quote-fab" type="button" aria-label="' + escapeHtml(t("quote.fabLabel", null, "Teklif Listesi")) + '">' +
         '<span class="quote-fab-icon">🧺</span>' +
-        '<span>Teklif Listem</span>' +
+        '<span>' + escapeHtml(t("quote.fabLabel", null, "Teklif Listem")) + '</span>' +
         '<span class="quote-badge" id="quote-badge">0</span>' +
       '</button>' +
       '<div class="quote-panel" id="quote-panel">' +
         '<div class="quote-panel-head">' +
-          '<h4>Teklif Listeniz</h4>' +
+          '<h4>' + escapeHtml(t("quote.panelTitle", null, "Teklif Listeniz")) + '</h4>' +
           '<button class="quote-panel-close" id="quote-panel-close" type="button" aria-label="Kapat">✕</button>' +
         '</div>' +
         '<div class="quote-list" id="quote-list"></div>' +
         '<div class="quote-panel-footer">' +
-          '<label class="quote-email-label" for="quote-email">E-posta adresiniz</label>' +
-          '<input type="email" id="quote-email" placeholder="ornek@eposta.com" required>' +
-          '<button class="btn btn-primary quote-submit" id="quote-submit" type="button">Teklif Al</button>' +
+          '<label class="quote-email-label" for="quote-email">' + escapeHtml(t("quote.emailLabel", null, "E-posta adresiniz")) + '</label>' +
+          '<input type="email" id="quote-email" placeholder="' + escapeHtml(t("quote.emailPlaceholder", null, "ornek@eposta.com")) + '" required>' +
+          '<button class="btn btn-primary quote-submit" id="quote-submit" type="button">' + escapeHtml(t("quote.submit", null, "Teklif Al")) + '</button>' +
           '<p class="quote-status" id="quote-status"></p>' +
-          '<p class="quote-note">Seçtiğiniz ürünler e-posta adresinizle birlikte tarafımıza iletilir.</p>' +
+          '<p class="quote-note">' + escapeHtml(t("quote.note", null, "Seçtiğiniz ürünler e-posta adresinizle birlikte tarafımıza iletilir.")) + '</p>' +
         '</div>' +
       '</div>';
     document.body.appendChild(wrap);
@@ -105,7 +110,7 @@
     badgeEl.style.display = items.length ? "inline-flex" : "none";
 
     if (!items.length) {
-      listEl.innerHTML = '<p class="quote-empty">Henüz ürün eklemediniz. Beğendiğiniz ürünlerin altındaki "Teklife ekle" kutucuğunu işaretleyin.</p>';
+      listEl.innerHTML = '<p class="quote-empty">' + escapeHtml(t("quote.empty", null, 'Henüz ürün eklemediniz. Beğendiğiniz ürünlerin altındaki "Teklife ekle" kutucuğunu işaretleyin.')) + '</p>';
       return;
     }
 
@@ -130,10 +135,10 @@
   }
 
   function buildMailtoFallback(email, lines) {
-    var body = "Merhaba,\n\nAşağıdaki ürünler için teklif almak istiyorum:\n\n" +
+    var body = t("quote.mailIntro", null, "Merhaba,\n\nAşağıdaki ürünler için teklif almak istiyorum:\n\n") +
       lines.join("\n") +
-      "\n\nBana ulaşabileceğiniz e-posta adresim: " + email + "\n";
-    var subject = "Teklif Talebi - Troy Soapun";
+      t("quote.mailEmailLine", { email: email }, "\n\nBana ulaşabileceğiniz e-posta adresim: " + email + "\n");
+    var subject = t("quote.mailSubject", null, "Teklif Talebi - Troy Soapun");
     return "mailto:" + TO_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
   }
 
@@ -144,46 +149,50 @@
     if (!emailPattern.test(email)) {
       emailInput.classList.add("quote-email-error");
       emailInput.focus();
-      setStatus("Lütfen geçerli bir e-posta adresi girin.", "error");
+      setStatus(t("quote.invalidEmail", null, "Lütfen geçerli bir e-posta adresi girin."), "error");
       return;
     }
     emailInput.classList.remove("quote-email-error");
 
     if (!items.length) {
-      setStatus("Önce listeye ürün eklemelisiniz.", "error");
+      setStatus(t("quote.noItems", null, "Önce listeye ürün eklemelisiniz."), "error");
       return;
     }
 
     localStorage.setItem(EMAIL_KEY, email);
 
     var lines = items.map(function (it, idx) { return (idx + 1) + ". " + it.label; });
-    var messageText = "Aşağıdaki ürünler için teklif almak istiyorum:\n\n" + lines.join("\n");
+    var messageText = t("quote.mailIntro", null, "Aşağıdaki ürünler için teklif almak istiyorum:\n\n") + lines.join("\n");
 
     submitBtn.disabled = true;
-    setStatus("Gönderiliyor…", "pending");
+    setStatus(t("quote.sending", null, "Gönderiliyor…"), "pending");
+
+    var fields = {
+      _subject: t("quote.mailSubject", null, "Teklif Talebi - Troy Soapun"),
+      _template: "table",
+      _replyto: email
+    };
+    fields[t("quote.fieldCustomerEmail", null, "Müşteri e-postası")] = email;
+    fields[t("quote.fieldRequestedProducts", null, "Talep edilen ürünler")] = lines.join(" | ");
+    fields[t("quote.fieldMessage", null, "Mesaj")] = messageText;
 
     fetch(FORM_ENDPOINT, {
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
-      body: JSON.stringify({
-        _subject: "Teklif Talebi - Troy Soapun",
-        _template: "table",
-        _replyto: email,
-        "Müşteri e-postası": email,
-        "Talep edilen ürünler": lines.join(" | "),
-        Mesaj: messageText
-      })
+      body: JSON.stringify(fields)
     }).then(function (res) {
       if (!res.ok) throw new Error("network");
       return res.json();
     }).then(function () {
-      setStatus("Teşekkürler! Teklifiniz tarafımıza iletildi.", "success");
+      setStatus(t("quote.success", null, "Teşekkürler! Teklifiniz tarafımıza iletildi."), "success");
       items = [];
       save();
       renderPanel();
     }).catch(function () {
       var mailto = buildMailtoFallback(email, lines);
-      statusEl.innerHTML = 'Gönderilemedi. <a href="' + mailto + '">Buraya tıklayarak</a> e-posta programınızdan gönderebilirsiniz.';
+      statusEl.innerHTML = escapeHtml(t("quote.failedPrefix", null, "Gönderilemedi. ")) +
+        '<a href="' + mailto + '">' + escapeHtml(t("quote.failedLink", null, "Buraya tıklayarak")) + '</a>' +
+        escapeHtml(t("quote.failedSuffix", null, " e-posta programınızdan gönderebilirsiniz."));
       statusEl.className = "quote-status quote-status-error";
     }).finally(function () {
       submitBtn.disabled = false;

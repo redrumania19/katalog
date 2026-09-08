@@ -21,8 +21,17 @@
   }
 
   function labelFor(product, i) {
-    if (product.labels && product.labels[i]) return product.labels[i];
-    return cleanCaption(product.images[i]);
+    var raw = (product.labels && product.labels[i]) ? product.labels[i] : cleanCaption(product.images[i]);
+    return window.I18N ? window.I18N.tVariant(raw) : raw;
+  }
+
+  function tCat(product, field) {
+    return (window.I18N ? window.I18N.tCat(product.id, field, product[field]) : product[field]) || "";
+  }
+
+  function t(key, vars, fallback) {
+    var val = window.I18N ? window.I18N.t(key, vars) : null;
+    return val != null ? val : fallback;
   }
 
   function detailUrl(productId, imageIndex) {
@@ -47,18 +56,21 @@
     if (isNaN(index) || index < 0 || index >= total) index = 0;
 
     var file = product.images[index];
+    var catTitle = tCat(product, "title");
+    var catSubtitle = tCat(product, "subtitle");
+    var catDesc = tCat(product, "description");
     var label = product.variantMode ? labelFor(product, index) : null;
-    var fullName = product.title + (label ? " — " + label : "");
+    var fullName = catTitle + (label ? " — " + label : "");
 
     document.getElementById("page-title").textContent = fullName + " | Troy Soapun";
     document.getElementById("detail-source").setAttribute("srcset", webpSrc(product.folder, file));
     document.getElementById("detail-image").src = imgSrc(product.folder, file);
     document.getElementById("detail-image").alt = fullName;
     document.getElementById("detail-image").setAttribute("draggable", "false");
-    document.getElementById("detail-eyebrow").textContent = product.subtitle ? product.title + " · " + product.subtitle : product.title;
-    document.getElementById("detail-title").textContent = label || product.title;
-    document.getElementById("detail-subtitle").textContent = label ? product.title + (product.subtitle ? " (" + product.subtitle + ")" : "") : (product.subtitle || "");
-    document.getElementById("detail-desc").textContent = product.description || "";
+    document.getElementById("detail-eyebrow").textContent = catSubtitle ? catTitle + " · " + catSubtitle : catTitle;
+    document.getElementById("detail-title").textContent = label || catTitle;
+    document.getElementById("detail-subtitle").textContent = label ? catTitle + (catSubtitle ? " (" + catSubtitle + ")" : "") : catSubtitle;
+    document.getElementById("detail-desc").textContent = catDesc;
     document.getElementById("back-link").href = "kategori.html?c=" + encodeURIComponent(product.id);
 
     var counter = document.getElementById("detail-counter");
@@ -76,7 +88,7 @@
       nextLink.style.display = "none";
     }
 
-    var orderText = "Merhaba, " + fullName + " hakkında bilgi almak istiyorum.";
+    var orderText = t("detail.orderMessage", { name: fullName }, "Merhaba, " + fullName + " hakkında bilgi almak istiyorum.");
     document.getElementById("order-link").href = "https://wa.me/" + WHATSAPP_NUMBER + "?text=" + encodeURIComponent(orderText);
 
     var quoteCheck = document.getElementById("detail-quote-check");
@@ -90,7 +102,7 @@
     if (total > 1) {
       var html = "";
       product.images.forEach(function (imgFile, i) {
-        var thumbLabel = product.variantMode ? labelFor(product, i) : product.title;
+        var thumbLabel = product.variantMode ? labelFor(product, i) : catTitle;
         html += '' +
           '<a class="variant-thumb' + (i === index ? " active" : "") + '" href="' + detailUrl(product.id, i) + '">' +
             '<picture>' +
