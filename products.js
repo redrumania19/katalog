@@ -278,10 +278,10 @@ window.PRODUCTS = [
     subtitle: null,
     folder: "Tahtalı Buklet Sabun",
     description: "Ahşap tahta üzerinde sunulan, buklet dokulu özel tasarım sabunumuz.",
-    variantMode: false,
+    variantMode: true,
     images: [
-      "ChatGPT Image 7 Eyl 2026 01_55_14.png",
-      "tahtalı buklet sabun.jpg"
+      "Eşek Sütü.png",
+      "Zeytinyağlı.png"
     ]
   },
   {
