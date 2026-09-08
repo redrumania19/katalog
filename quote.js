@@ -133,7 +133,7 @@
     var body = "Merhaba,\n\nAşağıdaki ürünler için teklif almak istiyorum:\n\n" +
       lines.join("\n") +
       "\n\nBana ulaşabileceğiniz e-posta adresim: " + email + "\n";
-    var subject = "Teklif Talebi - Doğal Sabun Atölyesi";
+    var subject = "Teklif Talebi - Troy Soapun";
     return "mailto:" + TO_EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
   }
 
@@ -166,7 +166,7 @@
       method: "POST",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({
-        _subject: "Teklif Talebi - Doğal Sabun Atölyesi",
+        _subject: "Teklif Talebi - Troy Soapun",
         _template: "table",
         _replyto: email,
         "Müşteri e-postası": email,

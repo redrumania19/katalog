@@ -43,7 +43,7 @@
     var label = product.variantMode ? labelFor(product, index) : null;
     var fullName = product.title + (label ? " — " + label : "");
 
-    document.getElementById("page-title").textContent = fullName + " | Doğal Sabun Atölyesi";
+    document.getElementById("page-title").textContent = fullName + " | Troy Soapun";
     document.getElementById("detail-image").src = imgSrc(product.folder, file);
     document.getElementById("detail-image").alt = fullName;
     document.getElementById("detail-eyebrow").textContent = product.subtitle ? product.title + " · " + product.subtitle : product.title;
