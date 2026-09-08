@@ -503,6 +503,9 @@
 
   function setLang(code) {
     localStorage.setItem(STORAGE_KEY, code);
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "language_change", { language_pref: code });
+    }
     window.location.reload();
   }
 
