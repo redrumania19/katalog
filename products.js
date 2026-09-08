@@ -59,7 +59,7 @@ window.PRODUCTS = [
       "Hamam",
       "Karpuz",
       "Keçi Sütü",
-      "Lavantalı Kolajen",
+      "Kolajen",
       "Lavanta",
       "Limon",
       "Mango",
