@@ -798,6 +798,11 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   .quote-panel { width: calc(100vw - 28px); }
 }
 
+/* Toptan Satış */
+.wholesale { padding: 70px 0; }
+.wholesale-list { max-width: 640px; margin-bottom: 30px; }
+.wholesale-list li::before { content: "📦"; }
+
 /* About */
 .about { padding: 70px 0; background: var(--cream-2); }
 .about-inner { max-width: 720px; }
