@@ -435,7 +435,8 @@
       "Vitamin E": "Vitamin E", "Yosun": "Seaweed", "Yılan Yağlı": "Snake Oil", "Yılan Yağı": "Snake Oil", "Zerdeçal": "Turmeric",
       "Zeytin": "Olive", "Zeytin Yapraklı": "Olive Leaf", "Zeytinyağlı": "With Olive Oil", "Zeytinyağı": "Olive Oil",
       "Çay Ağacı": "Tea Tree", "Çilek": "Strawberry", "Çörek Otu": "Black Seed", "Çörekotu": "Black Seed", "İhram": "Ihram",
-      "İnci Tozu": "Pearl Powder", "Şeftali": "Peach"
+      "İnci Tozu": "Pearl Powder", "Şeftali": "Peach", "Aktif Karbon": "Active Carbon", "Avokado & Chia": "Avocado & Chia",
+      "Ulu Ağaç": "Olive Tree", "Shea Butter": "Shea Butter"
     },
     es: {
       "Aktif Kömür & Karbon": "Carbón Activado", "Aloe Vera": "Aloe Vera", "Amber": "Ámbar", "Anti-Acne": "Anti-Acné",
@@ -457,7 +458,8 @@
       "Vitamin E": "Vitamina E", "Yosun": "Algas", "Yılan Yağlı": "Aceite de Serpiente", "Yılan Yağı": "Aceite de Serpiente", "Zerdeçal": "Cúrcuma",
       "Zeytin": "Aceituna", "Zeytin Yapraklı": "Hoja de Olivo", "Zeytinyağlı": "Con Aceite de Oliva", "Zeytinyağı": "Aceite de Oliva",
       "Çay Ağacı": "Árbol de Té", "Çilek": "Fresa", "Çörek Otu": "Comino Negro", "Çörekotu": "Comino Negro", "İhram": "Ihram",
-      "İnci Tozu": "Polvo de Perla", "Şeftali": "Melocotón"
+      "İnci Tozu": "Polvo de Perla", "Şeftali": "Melocotón", "Aktif Karbon": "Carbón Activo", "Avokado & Chia": "Aguacate y Chía",
+      "Ulu Ağaç": "Árbol de Olivo", "Shea Butter": "Manteca de Karité"
     },
     el: {
       "Aktif Kömür & Karbon": "Ενεργός Άνθρακας", "Aloe Vera": "Αλόη Βέρα", "Amber": "Κεχριμπάρι", "Anti-Acne": "Κατά της Ακμής",
@@ -479,7 +481,8 @@
       "Vitamin E": "Βιταμίνη Ε", "Yosun": "Φύκια", "Yılan Yağlı": "Λάδι Φιδιού", "Yılan Yağı": "Λάδι Φιδιού", "Zerdeçal": "Κουρκουμάς",
       "Zeytin": "Ελιά", "Zeytin Yapraklı": "Φύλλο Ελιάς", "Zeytinyağlı": "Με Ελαιόλαδο", "Zeytinyağı": "Ελαιόλαδο",
       "Çay Ağacı": "Δέντρο Τσαγιού", "Çilek": "Φράουλα", "Çörek Otu": "Μαυροκούκκι", "Çörekotu": "Μαυροκούκκι", "İhram": "Ιχράμ",
-      "İnci Tozu": "Σκόνη Μαργαριταριού", "Şeftali": "Ροδάκινο"
+      "İnci Tozu": "Σκόνη Μαργαριταριού", "Şeftali": "Ροδάκινο", "Aktif Karbon": "Ενεργός Άνθρακας", "Avokado & Chia": "Αβοκάντο & Τσία",
+      "Ulu Ağaç": "Δέντρο Ελιάς", "Shea Butter": "Βούτυρο Καριτέ"
     },
     fr: {
       "Aktif Kömür & Karbon": "Charbon Actif", "Aloe Vera": "Aloe Vera", "Amber": "Ambre", "Anti-Acne": "Anti-Acné",
@@ -501,7 +504,8 @@
       "Vitamin E": "Vitamine E", "Yosun": "Algues", "Yılan Yağlı": "Huile de Serpent", "Yılan Yağı": "Huile de Serpent", "Zerdeçal": "Curcuma",
       "Zeytin": "Olive", "Zeytin Yapraklı": "Feuille d'Olivier", "Zeytinyağlı": "À l'Huile d'Olive", "Zeytinyağı": "Huile d'Olive",
       "Çay Ağacı": "Arbre à Thé", "Çilek": "Fraise", "Çörek Otu": "Nigelle", "Çörekotu": "Nigelle", "İhram": "Ihram",
-      "İnci Tozu": "Poudre de Perle", "Şeftali": "Pêche"
+      "İnci Tozu": "Poudre de Perle", "Şeftali": "Pêche", "Aktif Karbon": "Charbon Actif", "Avokado & Chia": "Avocat & Chia",
+      "Ulu Ağaç": "Arbre d'Olivier", "Shea Butter": "Beurre de Karité"
     },
     ru: {
       "Aktif Kömür & Karbon": "Активированный Уголь", "Aloe Vera": "Алоэ Вера", "Amber": "Амбра", "Anti-Acne": "Против Акне",
@@ -523,7 +527,8 @@
       "Vitamin E": "Витамин Е", "Yosun": "Водоросли", "Yılan Yağlı": "Змеиный Жир", "Yılan Yağı": "Змеиный Жир", "Zerdeçal": "Куркума",
       "Zeytin": "Оливка", "Zeytin Yapraklı": "Оливковый Лист", "Zeytinyağlı": "С Оливковым Маслом", "Zeytinyağı": "Оливковое Масло",
       "Çay Ağacı": "Чайное Дерево", "Çilek": "Клубника", "Çörek Otu": "Чёрный Тмин", "Çörekotu": "Чёрный Тмин", "İhram": "Ихрам",
-      "İnci Tozu": "Жемчужная Пудра", "Şeftali": "Персик"
+      "İnci Tozu": "Жемчужная Пудра", "Şeftali": "Персик", "Aktif Karbon": "Активированный Уголь", "Avokado & Chia": "Авокадо и Чиа",
+      "Ulu Ağaç": "Оливковое Дерево", "Shea Butter": "Масло Ши"
     },
     de: {
       "Aktif Kömür & Karbon": "Aktivkohle", "Aloe Vera": "Aloe Vera", "Amber": "Amber", "Anti-Acne": "Anti-Akne",
@@ -545,7 +550,8 @@
       "Vitamin E": "Vitamin E", "Yosun": "Algen", "Yılan Yağlı": "Schlangenöl", "Yılan Yağı": "Schlangenöl", "Zerdeçal": "Kurkuma",
       "Zeytin": "Olive", "Zeytin Yapraklı": "Olivenblatt", "Zeytinyağlı": "Mit Olivenöl", "Zeytinyağı": "Olivenöl",
       "Çay Ağacı": "Teebaum", "Çilek": "Erdbeere", "Çörek Otu": "Schwarzkümmel", "Çörekotu": "Schwarzkümmel", "İhram": "Ihram",
-      "İnci Tozu": "Perlenpulver", "Şeftali": "Pfirsich"
+      "İnci Tozu": "Perlenpulver", "Şeftali": "Pfirsich", "Aktif Karbon": "Aktivkohle", "Avokado & Chia": "Avocado & Chia",
+      "Ulu Ağaç": "Olivenbaum", "Shea Butter": "Sheabutter"
     }
   };
 

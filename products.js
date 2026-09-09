@@ -242,18 +242,30 @@ window.PRODUCTS = [
     subtitle: "120 gr",
     folder: "Taş Dövme Sabun 120gr",
     description: "Geleneksel dövme tekniğiyle şekillendirilmiş, doğal taş dokulu özel tasarım sabunumuz.",
-    variantMode: false,
+    variantMode: true,
     images: [
       "ChatGPT Image 7 Eyl 2026 01_53_36.png",
       "ChatGPT Image 7 Eyl 2026 01_53_46.png",
       "ChatGPT Image 7 Eyl 2026 01_53_53.png",
       "ChatGPT Image 7 Eyl 2026 01_54_00.png",
-      "ChatGPT Image 7 Eyl 2026 01_54_14.png",
       "ChatGPT Image 7 Eyl 2026 01_54_30.png",
       "ChatGPT Image 7 Eyl 2026 01_54_39.png",
       "ChatGPT Image 7 Eyl 2026 01_54_50.png",
       "ChatGPT Image 7 Eyl 2026 01_54_57.png",
-      "ChatGPT Image 7 Eyl 2026 01_55_03.png"
+      "ChatGPT Image 7 Eyl 2026 01_55_03.png",
+      "Shea Butter.png"
+    ],
+    labels: [
+      "Keçi Sütü",
+      "Eşek Sütü",
+      "Zeytinyağlı",
+      "Kolajen",
+      "Aktif Karbon",
+      "Avokado & Chia",
+      "Ulu Ağaç",
+      "Gül",
+      "Lavanta",
+      "Shea Butter"
     ]
   },
   {
