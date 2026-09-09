@@ -52,6 +52,23 @@ function extractBody(html) {
   return m[1];
 }
 
+function buildProductJsonLd(opts) {
+  const data = {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: opts.name,
+    image: [opts.image],
+    description: opts.desc,
+    sku: opts.sku,
+    category: opts.category,
+    brand: { "@type": "Brand", name: "Troy Soapun" },
+    url: opts.url
+  };
+  // Google fiyat/stok bilgisi olmayan Offers'ı geçersiz sayar; sitede fiyat
+  // gösterilmediği için offers kasıtlı olarak eklenmiyor.
+  return JSON.stringify(data, null, 2).replace(/<\//g, "<\\/");
+}
+
 function buildHead(opts) {
   return [
     "<!DOCTYPE html>",
@@ -88,6 +105,9 @@ function buildHead(opts) {
     '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
     '<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">',
     '<link rel="stylesheet" href="style.css">',
+    '<script type="application/ld+json">',
+    opts.jsonLd,
+    "</script>",
     "</head>"
   ].join("\n");
 }
@@ -120,7 +140,16 @@ function main() {
       }
       body = body.replace('<script src="detail.js"></script>', presetScript + '<script src="detail.js"></script>');
 
-      const html = buildHead({ title: title, desc: desc, image: imageAbs, url: pageUrl }) +
+      const jsonLd = buildProductJsonLd({
+        name: fullName,
+        desc: desc,
+        image: imageAbs,
+        url: pageUrl,
+        sku: p.id + "-" + i,
+        category: p.title
+      });
+
+      const html = buildHead({ title: title, desc: desc, image: imageAbs, url: pageUrl, jsonLd: jsonLd }) +
         "\n<body>" + body + "</body>\n</html>\n";
 
       fs.writeFileSync(path.join(outDir, fileName), html, "utf8");
