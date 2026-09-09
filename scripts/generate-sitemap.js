@@ -23,6 +23,7 @@ function main() {
   const today = new Date().toISOString().slice(0, 10);
 
   const BLOG_SLUGS = [
+    "istanbulda-toptan-sabun-nereden-alinir",
     "dogal-sabun-fabrikasyon-sabun-farki",
     "sabun-saklama-onerileri",
     "cilt-tipine-gore-sabun-secimi",
