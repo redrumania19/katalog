@@ -83,6 +83,13 @@
           <p id="detail-desc" class="detail-desc"></p>
           <div class="detail-actions">
             <a id="order-link" class="btn btn-primary" href="#" target="_blank" rel="noopener" data-i18n="detail.order">Sipariş için WhatsApp'tan Yaz</a>
+            <div class="share-wrap">
+              <button type="button" id="share-btn" class="btn btn-ghost" data-i18n="detail.share">📤 Paylaş</button>
+              <div id="share-menu" class="share-menu">
+                <a id="share-whatsapp" href="#" target="_blank" rel="noopener" data-i18n="share.whatsapp">💬 WhatsApp'ta Paylaş</a>
+                <button type="button" id="share-copy" data-i18n="share.copyLink">🔗 Linki Kopyala</button>
+              </div>
+            </div>
             <label class="item-check item-check-lg">
               <input type="checkbox" class="quote-check" id="detail-quote-check">
               <span data-i18n="detail.addToQuote">Teklif listeme ekle</span>
@@ -113,6 +120,7 @@
 <script src="quote.js"></script>
 <script src="whatsapp-float.js"></script>
 <script src="consent.js"></script>
+<script src="share.js"></script>
 <script>window.__PRESET_P__="uclu-set";window.__PRESET_I__=0;</script>
 <script src="detail.js"></script>
 </body>

@@ -529,6 +529,48 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   flex-wrap: wrap;
 }
 
+.share-wrap { position: relative; }
+
+.share-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 0;
+  min-width: 200px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  opacity: 0;
+  transform: translateY(6px);
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 20;
+}
+.share-menu.open { opacity: 1; transform: translateY(0); pointer-events: auto; }
+
+.share-menu a,
+.share-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: 9px 10px;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  cursor: pointer;
+}
+.share-menu a:hover,
+.share-menu button:hover { background: var(--cream-2); }
+
 /* Sabit WhatsApp butonu */
 .whatsapp-float {
   position: fixed;
