@@ -14,7 +14,7 @@
 
   var UI = {
     en: {
-      "nav.products": "Products", "nav.wholesale": "Wholesale", "nav.about": "About Us", "nav.contact": "Contact", "nav.cta": "Get in Touch",
+      "nav.products": "Products", "nav.blog": "Blog", "nav.wholesale": "Wholesale", "nav.about": "About Us", "nav.contact": "Contact", "nav.cta": "Get in Touch",
       "wholesale.eyebrow": "Wholesale", "wholesale.title": "Wholesale Soap Orders",
       "wholesale.text": "We supply handmade soap in bulk to gift shops, hotels, spas and wedding/event companies. Contact us for wholesale pricing and quantity options across our entire catalog — cut soap, heart sponge soap, gift sets and more.",
       "wholesale.li1": "Wholesale soap for gift shops", "wholesale.li2": "Custom packaging for hotels and spas",
@@ -64,7 +64,7 @@
       "quote.fieldCustomerEmail": "Customer email", "quote.fieldRequestedProducts": "Requested products", "quote.fieldMessage": "Message"
     },
     es: {
-      "nav.products": "Productos", "nav.wholesale": "Venta al por Mayor", "nav.about": "Sobre Nosotros", "nav.contact": "Contacto", "nav.cta": "Contáctanos",
+      "nav.products": "Productos", "nav.blog": "Blog", "nav.wholesale": "Venta al por Mayor", "nav.about": "Sobre Nosotros", "nav.contact": "Contacto", "nav.cta": "Contáctanos",
       "wholesale.eyebrow": "Venta al por Mayor", "wholesale.title": "Pedidos de Jabón al por Mayor",
       "wholesale.text": "Suministramos jabón artesanal al por mayor a tiendas de regalos, hoteles, spas y empresas de bodas/eventos. Contáctanos para conocer precios y cantidades al por mayor en todo nuestro catálogo — jabón cortado, jabón esponja en forma de corazón, sets de regalo y más.",
       "wholesale.li1": "Jabón al por mayor para tiendas de regalos", "wholesale.li2": "Empaque personalizado para hoteles y spas",
@@ -114,7 +114,7 @@
       "quote.fieldCustomerEmail": "Correo del cliente", "quote.fieldRequestedProducts": "Productos solicitados", "quote.fieldMessage": "Mensaje"
     },
     el: {
-      "nav.products": "Προϊόντα", "nav.wholesale": "Χονδρική", "nav.about": "Σχετικά με εμάς", "nav.contact": "Επικοινωνία", "nav.cta": "Επικοινωνήστε",
+      "nav.products": "Προϊόντα", "nav.blog": "Ιστολόγιο", "nav.wholesale": "Χονδρική", "nav.about": "Σχετικά με εμάς", "nav.contact": "Επικοινωνία", "nav.cta": "Επικοινωνήστε",
       "wholesale.eyebrow": "Χονδρική Πώληση", "wholesale.title": "Παραγγελίες Σαπουνιού Χονδρικής",
       "wholesale.text": "Προμηθεύουμε χειροποίητο σαπούνι χονδρικής σε καταστήματα δώρων, ξενοδοχεία, spa και εταιρείες γάμων/εκδηλώσεων. Επικοινωνήστε μαζί μας για τιμές και ποσότητες χονδρικής σε ολόκληρο τον κατάλογό μας.",
       "wholesale.li1": "Σαπούνι χονδρικής για καταστήματα δώρων", "wholesale.li2": "Εξατομικευμένη συσκευασία για ξενοδοχεία και spa",
@@ -164,7 +164,7 @@
       "quote.fieldCustomerEmail": "Email πελάτη", "quote.fieldRequestedProducts": "Ζητούμενα προϊόντα", "quote.fieldMessage": "Μήνυμα"
     },
     fr: {
-      "nav.products": "Produits", "nav.wholesale": "Vente en Gros", "nav.about": "À Propos", "nav.contact": "Contact", "nav.cta": "Nous Contacter",
+      "nav.products": "Produits", "nav.blog": "Blog", "nav.wholesale": "Vente en Gros", "nav.about": "À Propos", "nav.contact": "Contact", "nav.cta": "Nous Contacter",
       "wholesale.eyebrow": "Vente en Gros", "wholesale.title": "Commandes de Savon en Gros",
       "wholesale.text": "Nous fournissons du savon artisanal en gros aux boutiques de cadeaux, hôtels, spas et entreprises de mariages/événements. Contactez-nous pour les prix et quantités en gros sur tout notre catalogue.",
       "wholesale.li1": "Savon en gros pour boutiques de cadeaux", "wholesale.li2": "Emballage personnalisé pour hôtels et spas",
@@ -214,7 +214,7 @@
       "quote.fieldCustomerEmail": "E-mail du client", "quote.fieldRequestedProducts": "Produits demandés", "quote.fieldMessage": "Message"
     },
     ru: {
-      "nav.products": "Продукция", "nav.wholesale": "Оптом", "nav.about": "О нас", "nav.contact": "Контакты", "nav.cta": "Связаться с нами",
+      "nav.products": "Продукция", "nav.blog": "Блог", "nav.wholesale": "Оптом", "nav.about": "О нас", "nav.contact": "Контакты", "nav.cta": "Связаться с нами",
       "wholesale.eyebrow": "Оптовая Продажа", "wholesale.title": "Оптовые Заказы Мыла",
       "wholesale.text": "Мы поставляем мыло ручной работы оптом магазинам подарков, отелям, спа-центрам и организаторам свадеб/мероприятий. Свяжитесь с нами для уточнения оптовых цен и количества по всему каталогу.",
       "wholesale.li1": "Оптовое мыло для магазинов подарков", "wholesale.li2": "Индивидуальная упаковка для отелей и спа",
@@ -264,7 +264,7 @@
       "quote.fieldCustomerEmail": "Email клиента", "quote.fieldRequestedProducts": "Запрошенные товары", "quote.fieldMessage": "Сообщение"
     },
     de: {
-      "nav.products": "Produkte", "nav.wholesale": "Großhandel", "nav.about": "Über Uns", "nav.contact": "Kontakt", "nav.cta": "Kontakt Aufnehmen",
+      "nav.products": "Produkte", "nav.blog": "Blog", "nav.wholesale": "Großhandel", "nav.about": "Über Uns", "nav.contact": "Kontakt", "nav.cta": "Kontakt Aufnehmen",
       "wholesale.eyebrow": "Großhandel", "wholesale.title": "Großhandelsbestellungen für Seife",
       "wholesale.text": "Wir beliefern Geschenkläden, Hotels, Spas und Hochzeits-/Eventfirmen mit handgefertigter Seife im Großhandel. Kontaktieren Sie uns für Großhandelspreise und Mengen für unseren gesamten Katalog.",
       "wholesale.li1": "Großhandelsseife für Geschenkläden", "wholesale.li2": "Individuelle Verpackung für Hotels und Spas",

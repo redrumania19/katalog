@@ -22,8 +22,20 @@ function main() {
   const products = readProducts();
   const today = new Date().toISOString().slice(0, 10);
 
+  const BLOG_SLUGS = [
+    "dogal-sabun-fabrikasyon-sabun-farki",
+    "sabun-saklama-onerileri",
+    "cilt-tipine-gore-sabun-secimi",
+    "toptan-sabun-alirken-dikkat-edilmesi-gerekenler",
+    "zeytinyagli-sabunun-faydalari"
+  ];
+
   const urls = [];
   urls.push({ loc: SITE_URL + "index.html", priority: "1.0" });
+  urls.push({ loc: SITE_URL + "blog.html", priority: "0.7" });
+  BLOG_SLUGS.forEach(function (slug) {
+    urls.push({ loc: SITE_URL + "blog/" + slug + ".html", priority: "0.6" });
+  });
 
   products.forEach(function (p) {
     urls.push({ loc: SITE_URL + "kategori.html?c=" + encodeURIComponent(p.id), priority: "0.8" });
