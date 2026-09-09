@@ -390,7 +390,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 }
 
 .category-card-image {
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   background: var(--cream-2);
 }
@@ -993,7 +993,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 .detail-image-wrap img {
   width: 100%;
   border-radius: 12px;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
 }
 
