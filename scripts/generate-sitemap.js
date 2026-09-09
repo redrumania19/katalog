@@ -9,7 +9,7 @@ const fs = require("fs");
 const path = require("path");
 
 const ROOT = path.join(__dirname, "..");
-const SITE_URL = "https://redrumania19.github.io/katalog/";
+const SITE_URL = "https://troysoapun.com/";
 
 function readProducts() {
   const raw = fs.readFileSync(path.join(ROOT, "products.js"), "utf8");
