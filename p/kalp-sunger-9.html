@@ -7,6 +7,7 @@
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { analytics_storage: localStorage.getItem('cookieConsent') === 'granted' ? 'granted' : 'denied' });
   gtag('js', new Date());
   gtag('set', { language_pref: localStorage.getItem('lang') || 'tr' });
   gtag('config', 'G-L1M5G05SW4');
@@ -110,6 +111,8 @@
 <script src="products.js"></script>
 <script src="search.js"></script>
 <script src="quote.js"></script>
+<script src="whatsapp-float.js"></script>
+<script src="consent.js"></script>
 <script>window.__PRESET_P__="kalp-sunger";window.__PRESET_I__=9;</script>
 <script src="detail.js"></script>
 </body>

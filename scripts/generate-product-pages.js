@@ -63,6 +63,7 @@ function buildHead(opts) {
     "<script>",
     "  window.dataLayer = window.dataLayer || [];",
     "  function gtag(){dataLayer.push(arguments);}",
+    "  gtag('consent', 'default', { analytics_storage: localStorage.getItem('cookieConsent') === 'granted' ? 'granted' : 'denied' });",
     "  gtag('js', new Date());",
     "  gtag('set', { language_pref: localStorage.getItem('lang') || 'tr' });",
     "  gtag('config', 'G-L1M5G05SW4');",

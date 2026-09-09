@@ -529,6 +529,67 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   flex-wrap: wrap;
 }
 
+/* Sabit WhatsApp butonu */
+.whatsapp-float {
+  position: fixed;
+  left: 22px;
+  bottom: 22px;
+  z-index: 150;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28);
+  text-decoration: none;
+  transition: transform 0.15s ease;
+}
+.whatsapp-float:hover { transform: translateY(-2px) scale(1.05); }
+.whatsapp-float-icon { font-size: 1.7rem; line-height: 1; }
+
+@media (max-width: 480px) {
+  .whatsapp-float { left: 14px; bottom: 14px; width: 50px; height: 50px; }
+  .whatsapp-float-icon { font-size: 1.5rem; }
+}
+
+/* Çerez izin bandı */
+.cookie-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 250;
+  background: var(--ink);
+  color: #f2ead9;
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+}
+.cookie-banner-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.cookie-banner-text { margin: 0; font-size: 0.92rem; max-width: 640px; }
+.cookie-banner-actions { display: flex; gap: 10px; flex-shrink: 0; }
+.cookie-banner .btn-ghost {
+  background: transparent;
+  border-color: rgba(242, 234, 217, 0.4);
+  color: #f2ead9;
+}
+.cookie-banner .btn-ghost:hover { border-color: #f2ead9; }
+
+@media (max-width: 640px) {
+  .cookie-banner-inner { padding: 16px; }
+  .cookie-banner-actions { width: 100%; }
+  .cookie-banner-actions .btn { flex: 1; }
+}
+
 /* Teklif listesi widget */
 .quote-widget { position: fixed; z-index: 150; right: 22px; bottom: 22px; }
 
