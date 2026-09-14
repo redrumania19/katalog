@@ -330,7 +330,8 @@
       "uclu-set": { title: "Trio Soap Set", subtitle: null, description: "Our set of three complementary soaps, also a great choice as a gift." },
       "lux-uclu-set": { title: "Luxury Trio Set", subtitle: null, description: "Our luxury trio soap set, standing out with its elegant packaging, ideal for gifting." },
       "zeytinyagi-uclu": { title: "Trio Olive Oil Soap", subtitle: null, description: "Our natural soap made with pure olive oil, offered as a set of three." },
-      "asetatli-hediyelik": { title: "Acetate Gift Set", subtitle: "Scrub Mitt + Soap", description: "Our elegant gift set presenting a scrub mitt and soap together in an acetate box." }
+      "asetatli-hediyelik": { title: "Acetate Gift Set", subtitle: "Scrub Mitt + Soap", description: "Our elegant gift set presenting a scrub mitt and soap together in an acetate box." },
+      "purlavie-bitkisel-sabun": { title: "Purlavie Herbal Soap", subtitle: "100 g", description: "Our herbal soap line, offered in a variety of distinctive scents and properties, 100 g each." }
     },
     es: {
       "kesme-sabun": { title: "Jabón Cortado", subtitle: "125 g", description: "Jabones cortados artesanales elaborados con aceites naturales, disponibles en una variedad de aromas e ingredientes distintivos." },
@@ -346,7 +347,8 @@
       "uclu-set": { title: "Set de Tres Jabones", subtitle: null, description: "Nuestro set de tres jabones que se complementan entre sí, también ideal como regalo." },
       "lux-uclu-set": { title: "Set de Lujo de Tres", subtitle: null, description: "Nuestro set de lujo de tres jabones, que destaca por su elegante empaque, ideal para regalar." },
       "zeytinyagi-uclu": { title: "Jabón de Aceite de Oliva (Trío)", subtitle: null, description: "Nuestro jabón natural elaborado con aceite de oliva puro, ofrecido en un set de tres." },
-      "asetatli-hediyelik": { title: "Set de Regalo en Caja de Acetato", subtitle: "Guante Exfoliante + Jabón", description: "Nuestro elegante set de regalo que presenta un guante exfoliante y jabón juntos en una caja de acetato." }
+      "asetatli-hediyelik": { title: "Set de Regalo en Caja de Acetato", subtitle: "Guante Exfoliante + Jabón", description: "Nuestro elegante set de regalo que presenta un guante exfoliante y jabón juntos en una caja de acetato." },
+      "purlavie-bitkisel-sabun": { title: "Jabón Herbal Purlavie", subtitle: "100 g", description: "Nuestra línea de jabones herbales, disponible en una variedad de aromas y propiedades distintivas, de 100 g cada uno." }
     },
     el: {
       "kesme-sabun": { title: "Σαπούνι σε Κομμάτια", subtitle: "125 γρ", description: "Χειροποίητα κομμένα σαπούνια από φυσικά έλαια, διαθέσιμα σε ποικιλία ξεχωριστών αρωμάτων και συστατικών." },
@@ -362,7 +364,8 @@
       "uclu-set": { title: "Σετ Τριών Σαπουνιών", subtitle: null, description: "Το σετ μας από τρία σαπούνια που αλληλοσυμπληρώνονται, ιδανικό επίσης ως δώρο." },
       "lux-uclu-set": { title: "Πολυτελές Σετ Τριών", subtitle: null, description: "Το πολυτελές μας σετ τριών σαπουνιών, που ξεχωρίζει για τη κομψή του συσκευασία, ιδανικό για δώρο." },
       "zeytinyagi-uclu": { title: "Σαπούνι Ελαιολάδου (Σετ Τριών)", subtitle: null, description: "Το φυσικό μας σαπούνι από αγνό ελαιόλαδο, προσφερόμενο σε σετ τριών." },
-      "asetatli-hediyelik": { title: "Δωρο-Σετ σε Κουτί Ασετάτ", subtitle: "Γάντι Απολέπισης + Σαπούνι", description: "Το κομψό μας δωρο-σετ που παρουσιάζει ένα γάντι απολέπισης και σαπούνι μαζί σε κουτί από ασετάτ." }
+      "asetatli-hediyelik": { title: "Δωρο-Σετ σε Κουτί Ασετάτ", subtitle: "Γάντι Απολέπισης + Σαπούνι", description: "Το κομψό μας δωρο-σετ που παρουσιάζει ένα γάντι απολέπισης και σαπούνι μαζί σε κουτί από ασετάτ." },
+      "purlavie-bitkisel-sabun": { title: "Βοτανικό Σαπούνι Purlavie", subtitle: "100 γρ", description: "Η σειρά μας από βοτανικά σαπούνια, διαθέσιμη σε ποικιλία ξεχωριστών αρωμάτων και ιδιοτήτων, των 100 γρ." }
     },
     fr: {
       "kesme-sabun": { title: "Savon Découpé", subtitle: "125 g", description: "Savons découpés artisanaux à base d'huiles naturelles, proposés dans une variété de parfums et d'ingrédients distinctifs." },
@@ -378,7 +381,8 @@
       "uclu-set": { title: "Coffret de Trois Savons", subtitle: null, description: "Notre coffret de trois savons qui se complètent, également un excellent choix cadeau." },
       "lux-uclu-set": { title: "Coffret de Luxe de Trois", subtitle: null, description: "Notre coffret de luxe de trois savons, qui se distingue par son emballage élégant, idéal à offrir." },
       "zeytinyagi-uclu": { title: "Savon à l'Huile d'Olive (Trio)", subtitle: null, description: "Notre savon naturel à l'huile d'olive pure, proposé en coffret de trois." },
-      "asetatli-hediyelik": { title: "Coffret Cadeau en Boîte Acétate", subtitle: "Gant Exfoliant + Savon", description: "Notre élégant coffret cadeau présentant un gant exfoliant et un savon ensemble dans une boîte en acétate." }
+      "asetatli-hediyelik": { title: "Coffret Cadeau en Boîte Acétate", subtitle: "Gant Exfoliant + Savon", description: "Notre élégant coffret cadeau présentant un gant exfoliant et un savon ensemble dans une boîte en acétate." },
+      "purlavie-bitkisel-sabun": { title: "Savon Végétal Purlavie", subtitle: "100 g", description: "Notre gamme de savons végétaux, proposée dans une variété de parfums et de propriétés distinctifs, de 100 g chacun." }
     },
     ru: {
       "kesme-sabun": { title: "Нарезное Мыло", subtitle: "125 г", description: "Ручное нарезное мыло на натуральных маслах, представлено в разнообразии особых ароматов и ингредиентов." },
@@ -394,7 +398,8 @@
       "uclu-set": { title: "Набор из Трёх Видов Мыла", subtitle: null, description: "Наш набор из трёх дополняющих друг друга видов мыла, отличный вариант для подарка." },
       "lux-uclu-set": { title: "Люкс-Набор из Трёх", subtitle: null, description: "Наш люксовый набор из трёх видов мыла, выделяющийся элегантной упаковкой, отлично подходит для подарка." },
       "zeytinyagi-uclu": { title: "Оливковое Мыло (Набор из Трёх)", subtitle: null, description: "Наше натуральное мыло на чистом оливковом масле, представленное набором из трёх штук." },
-      "asetatli-hediyelik": { title: "Подарочный Набор в Ацетатной Коробке", subtitle: "Мочалка-Кесе + Мыло", description: "Наш элегантный подарочный набор, представляющий мочалку-кесе и мыло вместе в ацетатной коробке." }
+      "asetatli-hediyelik": { title: "Подарочный Набор в Ацетатной Коробке", subtitle: "Мочалка-Кесе + Мыло", description: "Наш элегантный подарочный набор, представляющий мочалку-кесе и мыло вместе в ацетатной коробке." },
+      "purlavie-bitkisel-sabun": { title: "Растительное Мыло Purlavie", subtitle: "100 г", description: "Наша линейка растительного мыла в разнообразии особых ароматов и свойств, по 100 г." }
     },
     de: {
       "kesme-sabun": { title: "Geschnittene Seife", subtitle: "125 g", description: "Handgefertigte geschnittene Seifen aus natürlichen Ölen, erhältlich in einer Vielfalt unverwechselbarer Düfte und Zutaten." },
@@ -410,7 +415,8 @@
       "uclu-set": { title: "Dreier-Seifenset", subtitle: null, description: "Unser Set aus drei sich ergänzenden Seifen, auch als Geschenk bestens geeignet." },
       "lux-uclu-set": { title: "Luxus-Dreierset", subtitle: null, description: "Unser luxuriöses Dreier-Seifenset, das durch seine elegante Verpackung besticht, ideal zum Verschenken." },
       "zeytinyagi-uclu": { title: "Olivenöl-Seife (Dreierset)", subtitle: null, description: "Unsere natürliche Seife aus reinem Olivenöl, angeboten im Dreierset." },
-      "asetatli-hediyelik": { title: "Geschenkset in Acetat-Box", subtitle: "Peeling-Handschuh + Seife", description: "Unser elegantes Geschenkset, das einen Peeling-Handschuh und Seife zusammen in einer Acetat-Box präsentiert." }
+      "asetatli-hediyelik": { title: "Geschenkset in Acetat-Box", subtitle: "Peeling-Handschuh + Seife", description: "Unser elegantes Geschenkset, das einen Peeling-Handschuh und Seife zusammen in einer Acetat-Box präsentiert." },
+      "purlavie-bitkisel-sabun": { title: "Purlavie Pflanzenseife", subtitle: "100 g", description: "Unsere pflanzliche Seifenserie, erhältlich in einer Vielfalt unverwechselbarer Düfte und Eigenschaften, je 100 g." }
     }
   };
 

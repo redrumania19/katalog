@@ -328,12 +328,12 @@ window.PRODUCTS = [
     subtitle: null,
     folder: "3lü Set",
     description: "Birbirini tamamlayan üç sabundan oluşan, hediyelik olarak da tercih edilebilecek setimiz.",
-    variantMode: false,
+    variantMode: true,
     images: [
-      "ChatGPT Image 7 Eyl 2026 01_51_43.png",
-      "ChatGPT Image 7 Eyl 2026 01_51_54.png",
-      "ChatGPT Image 7 Eyl 2026 01_52_01.png",
-      "ChatGPT Image 7 Eyl 2026 01_52_10.png"
+      "Aloe Vera.webp",
+      "Lavanta.webp",
+      "Nar.webp",
+      "Zeytinyağlı.webp"
     ]
   },
   {
@@ -361,9 +361,9 @@ window.PRODUCTS = [
     subtitle: null,
     folder: "3lü Zeytinyağı Sabunu",
     description: "Saf zeytinyağı içeriğiyle hazırlanan, üçlü set halinde sunulan doğal sabunumuz.",
-    variantMode: false,
+    variantMode: true,
     images: [
-      "ChatGPT Image 7 Eyl 2026 01_55_22.png"
+      "Zeytinyağlı.webp"
     ]
   },
   {
@@ -372,12 +372,52 @@ window.PRODUCTS = [
     subtitle: "Kese + Sabun",
     folder: "Asetatlı Hediyelik Set Kese+Sabun",
     description: "Asetat kutusu içerisinde kese ve sabunun bir arada sunulduğu şık hediyelik setimiz.",
-    variantMode: false,
+    variantMode: true,
     images: [
-      "Gemini_Generated_Image_2fmevk2fmevk2fme.jfif",
-      "Gemini_Generated_Image_49gbod49gbod49gb.jfif",
-      "Gemini_Generated_Image_tutrtptutrtptutr.jfif",
-      "Gemini_Generated_Image_v599n6v599n6v599.jfif"
+      "Gül.webp",
+      "Lavanta.webp",
+      "Nar.webp",
+      "Zeytinyağlı.webp"
+    ]
+  },
+  {
+    id: "purlavie-bitkisel-sabun",
+    title: "Purlavie Bitkisel Sabun",
+    subtitle: "100 gr",
+    folder: "Purlavie Bitkisel Sabun 100 gr",
+    description: "Bitkisel içeriklerle hazırlanan, birbirinden farklı koku ve özelliklerde sunulan 100 gr'lık sabun çeşitlerimiz.",
+    variantMode: true,
+    images: [
+      "Aktif Karbon.png",
+      "Aloe Vera.png",
+      "Amber.png",
+      "Ardıç.png",
+      "Argan.png",
+      "Bebek.png",
+      "Bıttım.png",
+      "Defne.png",
+      "Deve Sütü.png",
+      "Eşek Sütü.png",
+      "Gül.png",
+      "Hamam.png",
+      "Hindistan Cevizi.png",
+      "Keçi Sütü.png",
+      "Kil.png",
+      "Kolajen.png",
+      "Kükürt.png",
+      "Lavanta.png",
+      "Limon.png",
+      "Nar.png",
+      "Oud.png",
+      "Pirinç.png",
+      "Portakal Tarçın.png",
+      "Safran.png",
+      "Salyangoz.png",
+      "Sarı Kantaron.png",
+      "Yasemin.png",
+      "Zerdeçal.png",
+      "Zeytinyağı.png",
+      "Çörekotu.png"
     ]
   }
 ];
