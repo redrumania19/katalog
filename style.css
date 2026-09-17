@@ -910,6 +910,17 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   left: 0;
 }
 
+/* Instagram feed */
+.instagram-feed { padding: 70px 0; }
+.instagram-feed .section-text a { color: var(--olive-dark); font-weight: 700; }
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 34px;
+}
+.instagram-grid iframe { border-radius: var(--radius) !important; }
+
 /* Contact */
 .contact { padding: 70px 0 90px; }
 .contact-cards {
