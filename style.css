@@ -939,7 +939,8 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   font-weight: 800;
   color: var(--olive-dark);
 }
-.contact-value { font-weight: 700; }
+.contact-value { font-weight: 700; display: flex; align-items: center; gap: 5px; }
+.instagram-icon svg, .instagram-value-icon { display: block; }
 .contact-card-static { cursor: default; }
 .contact-card-static:hover { transform: none; border-color: var(--line); }
 
