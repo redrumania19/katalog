@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-L1M5G05SW4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('consent', 'default', { analytics_storage: localStorage.getItem('cookieConsent') === 'granted' ? 'granted' : 'denied' });
+  gtag('js', new Date());
+  gtag('set', { language_pref: localStorage.getItem('lang') || 'tr' });
+  gtag('config', 'G-L1M5G05SW4');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sayfa Bulunamadı | Troy Soapun</title>
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="logo-256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Nunito+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="index.html#top" class="brand">
+      <img src="logo-256.png" class="brand-logo" alt="Troy Soapun logosu">
+      <span class="brand-name">Troy Soapun</span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html#urunler" data-i18n="nav.products">Ürünler</a>
+      <a href="index.html#toptan" data-i18n="nav.wholesale">Toptan Satış</a>
+      <a href="blog.html" data-i18n="nav.blog">Blog</a>
+      <a href="index.html#hakkimizda" data-i18n="nav.about">Hakkımızda</a>
+      <a href="index.html#iletisim" data-i18n="nav.contact">İletişim</a>
+    </nav>
+    <div id="lang-switcher" class="lang-switcher"></div>
+    <a href="index.html#iletisim" class="btn btn-outline nav-cta" data-i18n="nav.cta">İletişime Geç</a>
+  </div>
+</header>
+
+<main>
+  <section class="not-found-page">
+    <div class="container not-found-inner">
+      <p class="not-found-eyebrow">404</p>
+      <h1>Aradığınız sayfa bulunamadı</h1>
+      <p class="not-found-text">Bağlantı eskimiş ya da yanlış yazılmış olabilir. Aşağıdan devam edebilirsiniz.</p>
+      <div class="not-found-actions">
+        <a href="index.html" class="btn btn-primary">Ana Sayfaya Dön</a>
+        <a href="index.html#urunler" class="btn btn-outline">Ürünleri İncele</a>
+        <a href="blog.html" class="btn btn-outline">Blog'a Git</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p data-i18n="footer.rights">© 2026 Troy Soapun. Tüm hakları saklıdır.</p>
+    <p class="footer-note" data-i18n="footer.note">Bu site yalnızca ürün tanıtım kataloğu amaçlıdır.</p>
+  </div>
+</footer>
+
+<script src="i18n.js"></script>
+</body>
+</html>
