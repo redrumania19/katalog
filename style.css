@@ -956,6 +956,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   border: 0;
   display: block;
 }
+.map-actions { margin-top: 18px; text-align: center; }
 
 /* 404 sayfası */
 .not-found-page { padding: 90px 0 110px; text-align: center; }
