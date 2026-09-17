@@ -1119,3 +1119,23 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   .main-nav { display: none; }
   .detail-grid { grid-template-columns: 1fr; }
 }
+
+/* Sayfalar arası yumuşak geçiş (destekleyen tarayıcılarda; diğerlerinde normal geçiş çalışır) */
+@view-transition {
+  navigation: auto;
+}
+::view-transition-old(root) {
+  animation: troysoapun-fade-out 0.22s ease forwards;
+}
+::view-transition-new(root) {
+  animation: troysoapun-fade-in 0.28s ease backwards;
+}
+@keyframes troysoapun-fade-out {
+  to { opacity: 0; }
+}
+@keyframes troysoapun-fade-in {
+  from { opacity: 0; transform: translateY(10px); }
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root), ::view-transition-new(root) { animation: none; }
+}
