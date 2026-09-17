@@ -9,8 +9,10 @@
     { code: "el", flag: "🇬🇷", label: "Ελληνικά" },
     { code: "fr", flag: "🇫🇷", label: "Français" },
     { code: "ru", flag: "🇷🇺", label: "Русский" },
-    { code: "de", flag: "🇩🇪", label: "Deutsch" }
+    { code: "de", flag: "🇩🇪", label: "Deutsch" },
+    { code: "ar", flag: "🇸🇦", label: "العربية" }
   ];
+  var RTL_LANGS = ["ar"];
 
   var UI = {
     en: {
@@ -62,6 +64,56 @@
       "quote.mailIntro": "Hello,\n\nI'd like a quote for the following products:\n\n",
       "quote.mailEmailLine": "\n\nYou can reach me at: {email}\n",
       "quote.fieldCustomerEmail": "Customer email", "quote.fieldRequestedProducts": "Requested products", "quote.fieldMessage": "Message"
+    },
+    ar: {
+      "nav.products": "المنتجات", "nav.blog": "المدونة", "nav.wholesale": "بيع بالجملة", "nav.about": "من نحن", "nav.contact": "اتصل بنا", "nav.cta": "تواصل معنا",
+      "wholesale.eyebrow": "بيع بالجملة", "wholesale.title": "طلبات الصابون بالجملة",
+      "wholesale.text": "نقوم بتوريد الصابون اليدوي بكميات كبيرة لمحلات الهدايا والفنادق والمنتجعات الصحية وشركات الأعراس والفعاليات. تواصلوا معنا للحصول على أسعار الجملة وخيارات الكمية عبر كامل كتالوجنا — الصابون المقطوع، صابون الإسفنج على شكل قلب، أطقم الهدايا والمزيد.",
+      "wholesale.li1": "صابون بالجملة لمحلات الهدايا", "wholesale.li2": "تغليف مخصص للفنادق والمنتجعات",
+      "wholesale.li3": "طلبات بالجملة للأعراس والفعاليات", "wholesale.li4": "أطقم صابون هدايا للشركات",
+      "wholesale.cta": "راسلنا على واتساب لأسعار الجملة",
+      "search.placeholder": "ابحث عن المنتجات أو الروائح… (مثال: لافندر)",
+      "search.startHint": "ابدأ بكتابة اسم منتج أو رائحة للبحث.",
+      "search.noResults": 'لا توجد نتائج لـ "{q}".',
+      "search.moreResults": "+{n} نتيجة إضافية، ضيّق بحثك.",
+      "hero.eyebrow": "صناعة يدوية · مكونات طبيعية",
+      "hero.title": "يتشكل بالأيادي،<br>وُلد من الطبيعة",
+      "hero.text": "جميع الصابون في كتالوجنا مصنوع يدويًا، بزيوت طبيعية ومكونات مختارة بعناية. تصفح مجموعتنا الكاملة أدناه وتواصل معنا بخصوص أي منتج يعجبك.",
+      "hero.exploreBtn": "استكشف المنتجات", "hero.contactBtn": "تواصل معنا للطلب", "hero.downloadPdf": "📄 تحميل كتالوج PDF",
+      "products.eyebrow": "المجموعة", "products.title": "منتجاتنا",
+      "products.text": "انقر على فئة لتصفح جميع المنتجات والروائح ضمنها.",
+      "card.variantCount": "{n} رائحة", "card.photoCount": "{n} صورة", "card.view": "عرض ←",
+      "about.eyebrow": "من نحن", "about.title": "كل صابونة تُشكَّل باليد، بصبر",
+      "about.p1": "بالنسبة لنا، صناعة الصابون ليست مجرد عملية إنتاج بل تعبير عن احترام الطبيعة. كل قالب يُمزج ويُترك ليرتاح ويُشكَّل باليد بعناية، كأنه من مطبخ دافئ؛ لا توجد صابونتان متطابقتان تمامًا — ونحن لا نرى ذلك عيبًا، بل توقيع الحرفية اليدوية.",
+      "about.p2": "عند جمعنا للزيوت الطبيعية والمستخلصات النباتية والمكونات اللطيفة على البشرة، لدينا هدف واحد: صابون تستمتعون باستخدامه ومشاهدته، وتثقون به بثقة. من الاستخدام اليومي إلى هدايا المناسبات الخاصة، لدينا رائحة تناسب كل حاجة.",
+      "about.li1": "صناعة يدوية بدفعات صغيرة", "about.li2": "زيوت طبيعية ومكونات مختارة بعناية",
+      "about.li3": "أطقم هدايا للمناسبات الخاصة", "about.li4": "طلبات جملة / تجزئة متاحة",
+      "contact.eyebrow": "اتصل بنا", "contact.title": "تواصل معنا للطلبات والمعلومات",
+      "contact.text": "تواصل معنا عبر واتساب أو الهاتف أو البريد الإلكتروني أو إنستغرام لأي منتج يعجبك.",
+      "contact.whatsapp": "واتساب", "contact.phone": "الهاتف", "contact.email": "البريد الإلكتروني", "contact.instagram": "إنستغرام",
+      "contact.address": "العنوان", "contact.hours": "ساعات العمل",
+      "contact.hoursValue": "الإثنين–الجمعة 09:00–19:00 · السبت 10:00–18:00 · الأحد 11:00–18:00",
+      "footer.rights": "© 2026 تروي صوبون. جميع الحقوق محفوظة.", "footer.note": "هذا الموقع لغرض عرض المنتجات فقط.",
+      "cookie.message": "يستخدم هذا الموقع ملفات تعريف الارتباط لتحسين تجربتك وفهم إحصاءات الزوار.",
+      "cookie.accept": "قبول", "cookie.reject": "رفض",
+      "whatsapp.floatMessage": "مرحبًا، أرغب في معرفة المزيد عن منتجاتكم.", "whatsapp.floatLabel": "راسلنا على واتساب",
+      "detail.share": "📤 مشاركة", "share.whatsapp": "💬 مشاركة على واتساب", "share.copyLink": "🔗 نسخ الرابط", "share.copied": "تم النسخ!",
+      "category.back": "← العودة إلى جميع الفئات", "item.addToQuote": "أضف إلى عرض السعر",
+      "detail.back": "← العودة إلى الفئة", "detail.order": "راسلنا على واتساب للطلب",
+      "detail.addToQuote": "أضف إلى قائمة عرض السعر", "detail.otherVariants": "روائح أخرى في هذه الفئة",
+      "detail.orderMessage": "مرحبًا، أرغب في معرفة المزيد عن {name}.",
+      "quote.fabLabel": "قائمة عرض السعر", "quote.panelTitle": "قائمة عرض السعر الخاصة بك",
+      "quote.emailLabel": "بريدك الإلكتروني", "quote.emailPlaceholder": "you@example.com",
+      "quote.submit": "طلب عرض سعر", "quote.note": "سيتم إرسال المنتجات التي اخترتها إلينا مع عنوان بريدك الإلكتروني.",
+      "quote.empty": 'لم تقم بإضافة أي منتجات بعد. حدد مربع "أضف إلى عرض السعر" تحت المنتجات التي تعجبك.',
+      "quote.invalidEmail": "يرجى إدخال بريد إلكتروني صالح.", "quote.noItems": "أضف بعض المنتجات إلى القائمة أولاً.",
+      "quote.sending": "جارٍ الإرسال…", "quote.success": "شكرًا لك! تم إرسال طلب عرض السعر إلينا.",
+      "quote.failedPrefix": "تعذر الإرسال. ", "quote.failedLink": "اضغط هنا",
+      "quote.failedSuffix": " لإرساله من تطبيق بريدك الإلكتروني بدلاً من ذلك.",
+      "quote.mailSubject": "طلب عرض سعر - تروي صوبون",
+      "quote.mailIntro": "مرحبًا،\n\nأرغب في الحصول على عرض سعر للمنتجات التالية:\n\n",
+      "quote.mailEmailLine": "\n\nيمكنكم التواصل معي عبر: {email}\n",
+      "quote.fieldCustomerEmail": "بريد العميل", "quote.fieldRequestedProducts": "المنتجات المطلوبة", "quote.fieldMessage": "الرسالة"
     },
     es: {
       "nav.products": "Productos", "nav.blog": "Blog", "nav.wholesale": "Venta al por Mayor", "nav.about": "Sobre Nosotros", "nav.contact": "Contacto", "nav.cta": "Contáctanos",
@@ -333,6 +385,23 @@
       "asetatli-hediyelik": { title: "Acetate Gift Set", subtitle: "Scrub Mitt + Soap", description: "Our elegant gift set presenting a scrub mitt and soap together in an acetate box." },
       "purlavie-bitkisel-sabun": { title: "Purlavie Herbal Soap", subtitle: "100 g", description: "Our herbal soap line, offered in a variety of distinctive scents and properties, 100 g each." }
     },
+    ar: {
+      "kesme-sabun": { title: "صابون مقطوع", subtitle: "125 غ", description: "صابون مقطوع يدوي الصنع بزيوت طبيعية، متوفر بمجموعة متنوعة من الروائح والمكونات المميزة." },
+      "kalp-sunger": { title: "صابون إسفنجي بشكل قلب", subtitle: "135 غ", description: "صابون بشكل قلب مع إسفنج مدمج، محضر بعناية، مثالي كهدية." },
+      "askili-sabun": { title: "صابون معلق", subtitle: null, description: "صابون على حبل يمكن تعليقه، زخرفي وعملي في آن واحد." },
+      "soguk-proses": { title: "صابون يدوي بالمعالجة الباردة", subtitle: null, description: "تشكيلتنا من الصابون بالمعالجة الباردة، يُستخدم للوجه والشعر والجسم، بمكونات طبيعية." },
+      "paksa-sabun": { title: "صابون باكسا", subtitle: "125 غ", description: "تشكيلتنا من الصابون بتنوع واسع، من العناية بالبشرة إلى الاستخدامات الخاصة." },
+      "oval-sunger": { title: "صابون إسفنجي بيضاوي", subtitle: "135 غ", description: "مثالي للاستخدام اليومي بملمسه الناعم وشكله البيضاوي، مع إسفنج مدمج — بروائح متنوعة." },
+      "tas-dovme": { title: "صابون مطروق بملمس حجري", subtitle: "120 غ", description: "صابوننا المصمم خصيصًا، مُشكَّل بتقنية الطرق التقليدية، بملمس حجري طبيعي." },
+      "kagit-sarmali": { title: "صابون ملفوف بالورق", subtitle: "150 غ", description: "صابوننا المناسب للهدايا والاستخدام اليومي، ملفوف بلمسة ورقية أنيقة." },
+      "tahtali-buklet": { title: "صابون بملمس مموج على قاعدة خشبية", subtitle: null, description: "صابوننا المصمم خصيصًا، مقدم على لوح خشبي، بملمس مموج." },
+      "kabak-lifli": { title: "صابون بليفة طبيعية", subtitle: "100 غ", description: "صابوننا الخاص بليفة طبيعية مدمجة بداخله، يقشر البشرة بلطف — بروائح متنوعة." },
+      "uclu-set": { title: "طقم ثلاث صابونات", subtitle: null, description: "طقمنا المكون من ثلاث صابونات متكاملة، خيار رائع كهدية أيضًا." },
+      "lux-uclu-set": { title: "طقم فاخر من ثلاث قطع", subtitle: null, description: "طقمنا الفاخر من ثلاث صابونات، يتميز بتغليفه الأنيق، مثالي للإهداء." },
+      "zeytinyagi-uclu": { title: "صابون زيت الزيتون (ثلاثي)", subtitle: null, description: "صابوننا الطبيعي بزيت الزيتون النقي، مقدم في طقم من ثلاث قطع." },
+      "asetatli-hediyelik": { title: "طقم هدايا في علبة أسيتات", subtitle: "كيس تقشير + صابون", description: "طقم هدايانا الأنيق الذي يقدم كيس تقشير وصابون معًا في علبة أسيتات." },
+      "purlavie-bitkisel-sabun": { title: "صابون بورلافي العشبي", subtitle: "100 غ", description: "تشكيلتنا من الصابون العشبي، متوفرة بمجموعة متنوعة من الروائح والخصائص المميزة، 100 غ لكل قطعة." }
+    },
     es: {
       "kesme-sabun": { title: "Jabón Cortado", subtitle: "125 g", description: "Jabones cortados artesanales elaborados con aceites naturales, disponibles en una variedad de aromas e ingredientes distintivos." },
       "kalp-sunger": { title: "Jabón Esponja en Forma de Corazón", subtitle: "135 g", description: "Jabones en forma de corazón con esponja incorporada, preparados con esmero, ideales para regalar." },
@@ -443,6 +512,29 @@
       "Çay Ağacı": "Tea Tree", "Çilek": "Strawberry", "Çörek Otu": "Black Seed", "Çörekotu": "Black Seed", "İhram": "Ihram",
       "İnci Tozu": "Pearl Powder", "Şeftali": "Peach", "Aktif Karbon": "Active Carbon", "Avokado & Chia": "Avocado & Chia",
       "Ulu Ağaç": "Olive Tree", "Shea Butter": "Shea Butter"
+    },
+    ar: {
+      "Aktif Kömür & Karbon": "فحم مفعل وكربون", "Aloe Vera": "ألوفيرا", "Amber": "عنبر", "Anti-Acne": "مضاد لحب الشباب",
+      "Ardıç Katranı": "قطران العرعر", "Argan": "أرغان", "Argan Yağı": "زيت الأرغان", "Avokado": "أفوكادو", "Aynı Sefa": "ينبوع الشفاء",
+      "Bal": "عسل", "Bal & Keçi Sütü": "عسل وحليب الماعز", "Balık": "سمك", "Bebek": "أطفال", "Biberiye": "إكليل الجبل", "Bıttım": "بطم",
+      "Christmas": "عيد الميلاد", "Cilt Beyazlatma": "تفتيح البشرة", "Cilt Beyazlatıcı": "مفتح للبشرة", "Damla Sakızı": "المستكة",
+      "Defne": "غار", "Defne & Badem Yağı": "غار وزيت اللوز", "Dilek": "أمنية", "Elma": "تفاح", "Eşek Sütü": "حليب الأتان",
+      "Eşek Sütü & Bal": "حليب الأتان والعسل", "Gül": "ورد", "Hamam": "حمام", "Himalaya Tuzu": "ملح الهيمالايا",
+      "Hindistan Cevizi": "جوز الهند", "Hyaralonik Asit": "حمض الهيالورونيك", "Isırgan": "قراص", "Kahve": "قهوة", "Karpuz": "بطيخ",
+      "Kayısı": "مشمش", "Kefir": "كفير", "Keçi Sütü": "حليب الماعز", "Kil": "طين", "Kiraz": "كرز",
+      "Kojik Asit & Pirinç": "حمض الكوجيك والأرز", "Kolajen": "كولاجين", "Kükürt": "كبريت", "Lavanta": "لافندر", "Limon": "ليمون",
+      "Limon & Portakal": "ليمون وبرتقال", "Love You": "أحبك", "Makademya": "مكاداميا", "Mandalina": "يوسفي", "Mango": "مانجو",
+      "Menthol": "مينثول", "Misk": "مسك", "Misk & Amber": "مسك وعنبر", "Misk Tahara": "مسك طهارة", "Mor Reyhan": "ريحان أرجواني",
+      "Nar": "رمان", "Nazar": "عين زرقاء", "Nemlendirici Kremli": "كريم مرطب", "Okyanus": "محيط", "Orkide": "أوركيد",
+      "Orman Meyvesi": "ثمار الغابة", "Oud": "عود", "Papatya": "بابونج", "Pirinç": "أرز", "Q10 Yaşlanma Karşıtı": "Q10 مضاد للشيخوخة",
+      "Ruşur Taşlı": "حجر الخفاف", "Ruşur Taşı": "حجر الخفاف", "Safran": "زعفران", "Salatalık": "خيار", "Salyangoz": "حلزون",
+      "Sarımsak": "ثوم", "Saç Bakım": "العناية بالشعر", "Siyah Üzüm Çekirdeği": "بذور العنب الأسود", "Tropikal": "استوائي",
+      "Türk Hamamı": "الحمام التركي", "Türk Hamamı & Pirinç Yağı": "الحمام التركي وزيت الأرز", "Ud": "عود", "Vanilya": "فانيليا",
+      "Vitamin E": "فيتامين E", "Yosun": "طحالب", "Yılan Yağlı": "زيت الأفعى", "Yılan Yağı": "زيت الأفعى", "Zerdeçal": "كركم",
+      "Zeytin": "زيتون", "Zeytin Yapraklı": "ورق الزيتون", "Zeytinyağlı": "بزيت الزيتون", "Zeytinyağı": "زيت الزيتون",
+      "Çay Ağacı": "شجرة الشاي", "Çilek": "فراولة", "Çörek Otu": "حبة البركة", "Çörekotu": "حبة البركة", "İhram": "إحرام",
+      "İnci Tozu": "بودرة اللؤلؤ", "Şeftali": "خوخ", "Aktif Karbon": "كربون مفعل", "Avokado & Chia": "أفوكادو وشيا",
+      "Ulu Ağaç": "شجرة الزيتون", "Shea Butter": "زبدة الشيا"
     },
     es: {
       "Aktif Kömür & Karbon": "Carbón Activado", "Aloe Vera": "Aloe Vera", "Amber": "Ámbar", "Anti-Acne": "Anti-Acné",
@@ -629,7 +721,9 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
-    document.documentElement.setAttribute("lang", getLang());
+    var lang = getLang();
+    document.documentElement.setAttribute("lang", lang);
+    document.documentElement.setAttribute("dir", RTL_LANGS.indexOf(lang) !== -1 ? "rtl" : "ltr");
     var switcherEl = document.getElementById("lang-switcher");
     if (switcherEl) buildLangSwitcher(switcherEl);
     applyStaticTranslations(document);

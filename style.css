@@ -831,7 +831,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
 }
 .blog-card:hover { transform: translateY(-4px); box-shadow: 0 16px 36px rgba(60, 50, 38, 0.18); }
 
-.blog-card-image { aspect-ratio: 4 / 3; overflow: hidden; background: var(--cream-2); }
+.blog-card-image { aspect-ratio: 1 / 1; overflow: hidden; background: var(--cream-2); }
 .blog-card-image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
 .blog-card:hover .blog-card-image img { transform: scale(1.06); }
 
@@ -865,7 +865,7 @@ h2 { font-size: clamp(1.6rem, 3vw, 2.3rem); }
   margin-bottom: 36px;
   max-width: 900px;
 }
-.post-cover img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.post-cover img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
 
 .post-content { max-width: 720px; color: var(--ink-soft); font-size: 1.02rem; }
 .post-content h2 { font-size: 1.4rem; margin-top: 40px; color: var(--ink); }

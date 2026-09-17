@@ -28,7 +28,8 @@ function main() {
     "sabun-saklama-onerileri",
     "cilt-tipine-gore-sabun-secimi",
     "toptan-sabun-alirken-dikkat-edilmesi-gerekenler",
-    "zeytinyagli-sabunun-faydalari"
+    "zeytinyagli-sabunun-faydalari",
+    "turk-hamaminda-sabunun-yeri"
   ];
 
   const urls = [];
