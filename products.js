@@ -9,6 +9,7 @@ window.PRODUCTS = [
     subtitle: "125 gr",
     folder: "Kesme Sabun 125 gr",
     description: "Doğal yağlarla üretilen, el yapımı kesme sabunlarımız birbirinden özel koku ve içeriklerle sunulur.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Ardıç Katranı.png",
@@ -35,6 +36,7 @@ window.PRODUCTS = [
     subtitle: "135 gr",
     folder: "Kalp Sünger Sabun 135 gr",
     description: "Kalp şeklinde, sünger içerikli, hediyelik amaçlı özenle hazırlanmış sabunlarımız.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Aloe Vera.png",
@@ -73,6 +75,7 @@ window.PRODUCTS = [
     subtitle: null,
     folder: "Askılı Sabun",
     description: "İpe dizilerek asılabilen, hem dekoratif hem işlevsel özel tasarım sabunlarımız.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Balık Sabunu.jpg",
@@ -91,6 +94,7 @@ window.PRODUCTS = [
     subtitle: null,
     folder: "El Yapımı Soğuk Proses Sabun",
     description: "Soğuk proses yöntemiyle üretilen, yüz, saç ve vücutta kullanılabilen doğal içerikli sabun serimiz.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "dogal-aktif-komur-karbon-el-yapimi-yuz-sac-ve-vucut-sabunu-13.jpg",
@@ -139,6 +143,7 @@ window.PRODUCTS = [
     subtitle: "125 gr",
     folder: "Paksa Sabun 125 gr",
     description: "Cilt bakımından özel amaçlı kullanıma kadar geniş bir çeşit yelpazesiyle sunulan sabun serimiz.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Aloe Vera.png",
@@ -207,6 +212,7 @@ window.PRODUCTS = [
     subtitle: "135 gr",
     folder: "Oval Sünger Sabun 135gr",
     description: "Yumuşak dokusu ve oval formuyla günlük kullanım için ideal, sünger içerikli sabunumuz — birbirinden farklı kokularla.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Aloe Vera.png",
@@ -242,6 +248,7 @@ window.PRODUCTS = [
     subtitle: "120 gr",
     folder: "Taş Dövme Sabun 120gr",
     description: "Geleneksel dövme tekniğiyle şekillendirilmiş, doğal taş dokulu özel tasarım sabunumuz.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "ChatGPT Image 7 Eyl 2026 01_53_36.png",
@@ -274,6 +281,7 @@ window.PRODUCTS = [
     subtitle: "150 gr",
     folder: "Kağıt Sarmalı Sabun 150gr",
     description: "Zarif kağıt sarma detayıyla hediyelik ve günlük kullanıma uygun sabunumuz.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Christmas.png",
@@ -290,6 +298,7 @@ window.PRODUCTS = [
     subtitle: null,
     folder: "Tahtalı Buklet Sabun",
     description: "Ahşap tahta üzerinde sunulan, buklet dokulu özel tasarım sabunumuz.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Eşek Sütü.png",
@@ -302,6 +311,7 @@ window.PRODUCTS = [
     subtitle: "100 gr",
     folder: "Kabak Lifli Sabun 100gr",
     description: "İçine gömülü doğal kabak lifi ile cildi nazikçe peeling eden özel sabunumuz — birbirinden farklı kokularla.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Aloe Vera.jpg",
@@ -328,6 +338,7 @@ window.PRODUCTS = [
     subtitle: null,
     folder: "3lü Set",
     description: "Birbirini tamamlayan üç sabundan oluşan, hediyelik olarak da tercih edilebilecek setimiz.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Aloe Vera.webp",
@@ -342,6 +353,7 @@ window.PRODUCTS = [
     subtitle: null,
     folder: "Lüx 3lü Set",
     description: "Şık ambalajı ile öne çıkan, hediyelik amaçlı lüks üçlü sabun setimiz.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: false,
     images: [
       "Gemini_Generated_Image_2qx62g2qx62g2qx6.jfif.jpg",
@@ -361,6 +373,7 @@ window.PRODUCTS = [
     subtitle: null,
     folder: "3lü Zeytinyağı Sabunu",
     description: "Saf zeytinyağı içeriğiyle hazırlanan, üçlü set halinde sunulan doğal sabunumuz.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Zeytinyağlı.webp"
@@ -372,6 +385,7 @@ window.PRODUCTS = [
     subtitle: "Kese + Sabun",
     folder: "Asetatlı Hediyelik Set Kese+Sabun",
     description: "Asetat kutusu içerisinde kese ve sabunun bir arada sunulduğu şık hediyelik setimiz.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Gül.webp",
@@ -386,6 +400,7 @@ window.PRODUCTS = [
     subtitle: "100 gr",
     folder: "Purlavie Bitkisel Sabun 100 gr",
     description: "Bitkisel içeriklerle hazırlanan, birbirinden farklı koku ve özelliklerde sunulan 100 gr'lık sabun çeşitlerimiz.",
+    banner: "Kategori Fotoğrafı.png",
     variantMode: true,
     images: [
       "Aktif Karbon.png",

@@ -43,9 +43,20 @@
     var html = "";
 
     products.forEach(function (p) {
+      var title = tCat(p, "title");
+
+      if (p.banner) {
+        var bannerSrc = imgSrc(p.folder, p.banner);
+        var bannerWebp = webpSrc(p.folder, p.banner);
+        html += '' +
+          '<a class="category-banner-tile" href="' + categoryUrl(p.id) + '">' +
+            '<picture><source srcset="' + bannerWebp + '" type="image/webp"><img src="' + bannerSrc + '" alt="' + escapeHtml(title) + '" loading="lazy" draggable="false"></picture>' +
+          '</a>';
+        return;
+      }
+
       var cover = imgSrc(p.folder, p.images[0]);
       var coverWebp = webpSrc(p.folder, p.images[0]);
-      var title = tCat(p, "title");
       var subtitle = tCat(p, "subtitle");
       var desc = tCat(p, "description");
       html += '' +
